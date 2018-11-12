@@ -1,16 +1,20 @@
 {
     "id":1,
     "name": "MediaStation",
+    "creat_time": "添加时间",
     "version":[
         {
             "version_id": 1.0,
             "url": "下载地址",
-            "info": "1.0正式版本说明"
+            "info": "1.0正式版本说明",
+            "creat_time": "添加时间"
+
         },
         {
             "version_id": 0.9,
             "url": "下载地址",
-            "info": "0.9测试版本说明"
+            "info": "0.9测试版本说明",
+            "creat_time": "添加时间"
         }
     ]
 }
