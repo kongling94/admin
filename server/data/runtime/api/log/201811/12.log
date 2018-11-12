@@ -1,0 +1,820 @@
+---------------------------------------------------------------
+[ 2018-11-12T10:08:15+08:00 ] 127.0.0.1 GET /server/public/api/
+[ info ] appmanage.net/server/public/api/ [运行时间：0.161009s][吞吐率：6.21req/s] [内存消耗：1,545.59kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'purpose' => 'prefetch',
+  'connection' => 'close',
+  'host' => 'appmanage.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004000s ]
+[ info ] [ RUN ] api\home\controller\IndexController->index[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\home\controller\IndexController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T10:11:42+08:00 ] 127.0.0.1 POST /server/public/api/
+[ info ] appmanage.net/server/public/api/ [运行时间：0.199012s][吞吐率：5.02req/s] [内存消耗：1,544.46kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.012001s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '163',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------206143299976638924872214',
+  'postman-token' => '0f76d0b3-a56b-4a14-ac8b-379337173ed4',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'product' => '1',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004001s ]
+[ info ] [ RUN ] api\home\controller\IndexController->index[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\home\controller\IndexController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T10:24:55+08:00 ] 127.0.0.1 GET /server/public/api/
+[ info ] appmanage.net/server/public/api/ [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：1,545.60kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006001s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'purpose' => 'prefetch',
+  'connection' => 'close',
+  'host' => 'appmanage.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\home\controller\IndexController->index[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\home\controller\IndexController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T10:25:27+08:00 ] 127.0.0.1 GET /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.106006s][吞吐率：9.43req/s] [内存消耗：1,560.55kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007001s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'appmanage.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002001s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T10:25:48+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.156009s][吞吐率：6.41req/s] [内存消耗：2,179.86kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '280',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------210988644012711802850418',
+  'postman-token' => 'b58c2b55-c084-41de-b5cb-fb22fb70b6ab',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002001s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033002s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-12T10:31:43+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：2,179.86kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '280',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------190439601667620754014415',
+  'postman-token' => '6253fe29-756e-4fec-882c-8a11337e8c47',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-11-12T10:40:09+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.052002s][吞吐率：19.23req/s] [内存消耗：2,145.39kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '280',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------628446159065308392947036',
+  'postman-token' => 'ebaaa02e-1a2c-4912-af22-0e419ad3cf3d',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T10:57:24+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.080005s][吞吐率：12.50req/s] [内存消耗：2,179.86kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '280',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------169940121117348547268995',
+  'postman-token' => 'e63ced4f-9414-42f5-b183-c0dcaa58742f',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001001s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-11-12T10:58:33+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.073004s][吞吐率：13.70req/s] [内存消耗：2,179.26kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005001s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '280',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------270130014750226681909150',
+  'postman-token' => 'c0816352-49e5-40c7-aa77-3834f7f395cc',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.011001s ]
+---------------------------------------------------------------
+[ 2018-11-12T10:59:50+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：1.121064s][吞吐率：0.89req/s] [内存消耗：2,176.18kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '396',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------680432090794776412999408',
+  'postman-token' => 'af896912-73f9-4eba-9c82-61e4d87b7fb8',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.092005s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'mobile' LIMIT 1 [ RunTime:0.006000s ]
+[ sql ] [ SQL ] INSERT INTO `am_user_token` (`token` , `user_id` , `expire_time` , `create_time` , `device_type`) VALUES ('091e75a267161cc8c1654d81d4c1c2c5091e75a267161cc8c1654d81d4c1c2c5' , 1 , 1557543589 , 1541991589 , 'mobile') [ RunTime:0.843049s ]
+---------------------------------------------------------------
+[ 2018-11-12T11:07:11+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：1,560.14kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '391',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------988194676273862343389888',
+  'postman-token' => '25bae9eb-1a62-43ed-bd63-ad3586385bb8',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T11:48:22+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.186010s][吞吐率：5.38req/s] [内存消耗：1,581.66kb] [文件加载：54]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '397',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------007859831665498787734875',
+  'postman-token' => '2903433c-6221-4db3-8b0b-3caaf8ab0b0d',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '$validate' (T_VARIABLE), expecting function (T_FUNCTION)[D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php:96]
+---------------------------------------------------------------
+[ 2018-11-12T11:48:54+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.050002s][吞吐率：20.00req/s] [内存消耗：1,581.63kb] [文件加载：54]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '396',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------340648659486649523341429',
+  'postman-token' => '86a75412-6598-4f0b-8ca7-a42e8f9631cf',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '$validate' (T_VARIABLE), expecting function (T_FUNCTION)[D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php:96]
+---------------------------------------------------------------
+[ 2018-11-12T11:49:13+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.063004s][吞吐率：15.87req/s] [内存消耗：2,181.11kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '396',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------290376210939837312665595',
+  'postman-token' => '541d8d82-fd30-437c-a8dd-5ea5b63ec4c0',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-12T11:49:21+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.067004s][吞吐率：14.92req/s] [内存消耗：2,181.10kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005001s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '397',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------873420042567259597386762',
+  'postman-token' => '86829739-1ce8-483b-b9a3-9b465b353758',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T11:49:30+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.476027s][吞吐率：2.10req/s] [内存消耗：2,177.93kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '398',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------388942134320146800444004',
+  'postman-token' => '753a275c-21f0-4a7c-9a01-88804a148773',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'mobile' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='f3c5beb7ed9199608b51c3ab10582a14f3c5beb7ed9199608b51c3ab10582a14',`expire_time`=1557546569,`create_time`=1541994569  WHERE  `user_id` = 1  AND `device_type` = 'mobile' [ RunTime:0.401023s ]
+---------------------------------------------------------------
+[ 2018-11-12T14:16:32+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.132008s][吞吐率：7.58req/s] [内存消耗：2,180.40kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '398',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------579090252549551365256315',
+  'postman-token' => '97f85a79-6889-48d8-bbf5-7b19a0075a2d',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016001s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-12T14:16:48+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.164009s][吞吐率：6.10req/s] [内存消耗：2,177.35kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '398',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------761671095841769231909429',
+  'postman-token' => '92a2dc90-1ee6-4b6c-a55d-2192927abeb2',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.054003s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'mobile' LIMIT 1 [ RunTime:0.018001s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='b26288cbbe284c48a4f579e8fe1963fcb26288cbbe284c48a4f579e8fe1963fc',`expire_time`=1557555408,`create_time`=1542003408  WHERE  `user_id` = 1  AND `device_type` = 'mobile' [ RunTime:0.015001s ]
+---------------------------------------------------------------
+[ 2018-11-12T14:21:50+08:00 ] 127.0.0.1 GET /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：1,560.18kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'application/json',
+  'postman-token' => '9cee674e-f466-435b-aa96-1646913e28fa',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T14:22:00+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：1.173067s][吞吐率：0.85req/s] [内存消耗：2,177.35kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '398',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------421918999081322815459819',
+  'postman-token' => '33fdca27-ac1f-472f-8799-c85bfd2c9ec9',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.214012s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'mobile' LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='6d4655a5d8c39d99ba6ba601a0478efa6d4655a5d8c39d99ba6ba601a0478efa',`expire_time`=1557555719,`create_time`=1542003719  WHERE  `user_id` = 1  AND `device_type` = 'mobile' [ RunTime:0.827047s ]
+---------------------------------------------------------------
+[ 2018-11-12T14:23:03+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.967056s][吞吐率：1.03req/s] [内存消耗：2,177.37kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '398',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------911126207874515112815896',
+  'postman-token' => '94fbb007-ef58-42a1-a556-f66ce97f0a66',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'mobile' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='2e77d0771a6e261af978fb26e3ee46c82e77d0771a6e261af978fb26e3ee46c8',`expire_time`=1557555782,`create_time`=1542003782  WHERE  `user_id` = 1  AND `device_type` = 'mobile' [ RunTime:0.886051s ]
+---------------------------------------------------------------
+[ 2018-11-12T14:28:34+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/login
+[ info ] appmanage.net/server/public/api/admin/public/login [运行时间：0.916052s][吞吐率：1.09req/s] [内存消耗：2,177.52kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005001s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '398',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------177735555187264279761744',
+  'postman-token' => 'a058df38-defa-4313-8c09-a3cf2f0c6e36',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'mobile',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'mobile' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='7f04825dc4b54f409aa581ab33c1641c7f04825dc4b54f409aa581ab33c1641c',`expire_time`=1557556114,`create_time`=1542004114  WHERE  `user_id` = 1  AND `device_type` = 'mobile' [ RunTime:0.831048s ]

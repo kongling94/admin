@@ -1,0 +1,122 @@
+---------------------------------------------------------------
+[ 2018-11-09T10:30:22+08:00 ] 168.168.4.20 GET /app_manage/server/public/api/
+[ info ] 168.168.4.20/app_manage/server/public/api/ [运行时间：0.259703s][吞吐率：3.85req/s] [内存消耗：562.65kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.012319s ]
+[ info ] [ LANG ] /var/www/app_manage/server/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '168.168.4.20',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/70.0.3538.77 Chrome/70.0.3538.77 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,en-US;q=0.7',
+  'cookie' => 'thinkphp_show_page_trace=0|0; UM_distinctid=16685f5b14775-0e2b6daf73754-24414032-1fa400-16685f5b148209; cookie_token=149d3aa38c34a4e4cb07ab5166dd8c1e85b336a5648af87dbb7cde436df497ca; admin_username=admin; ECS[visit_times]=2; CNZZDATA1260434001=1703256681-1539842422-http%253A%252F%252F168.168.4.20%252F%7C1540807386; _cnzz_CV1260434001=toJSONString%7C%7C; PHPSESSID=e0unrqfcnrigtrkl7atjsl7ks4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/app_manage/server/public/api/../../simplewind/cmf/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000840s ]
+[ info ] [ RUN ] api\home\controller\IndexController->index[ /var/www/app_manage/server/api/home/controller/IndexController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-09T10:43:21+08:00 ] 168.168.100.166 GET /app_manage/server/public/api/
+[ info ] 168.168.4.20/app_manage/server/public/api/ [运行时间：0.073241s][吞吐率：13.65req/s] [内存消耗：555.88kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.014098s ]
+[ info ] [ LANG ] /var/www/app_manage/server/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '168.168.4.20',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/app_manage/server/public/api/../../simplewind/cmf/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000262s ]
+[ info ] [ RUN ] api\home\controller\IndexController->index[ /var/www/app_manage/server/api/home/controller/IndexController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-09T10:47:48+08:00 ] 168.168.100.166 GET /app_manage/server/public/api/
+[ info ] 168.168.4.20/app_manage/server/public/api/ [运行时间：0.528609s][吞吐率：1.89req/s] [内存消耗：556.85kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.000568s ]
+[ info ] [ LANG ] /var/www/app_manage/server/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '168.168.4.20',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/app_manage/server/public/api/../../simplewind/cmf/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000274s ]
+[ info ] [ RUN ] api\home\controller\IndexController->index[ /var/www/app_manage/server/api/home/controller/IndexController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-09T11:52:58+08:00 ] 127.0.0.1 GET /server/public/api/
+[ info ] appmanage.net/server/public/api/ [运行时间：0.118006s][吞吐率：8.47req/s] [内存消耗：1,545.48kb] [文件加载：51]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.048003s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'appmanage.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\home\controller\IndexController->index[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\home\controller\IndexController.php ]
+[ info ] [ LOG ] INIT File
