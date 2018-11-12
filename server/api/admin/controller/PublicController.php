@@ -33,6 +33,7 @@ class PublicController extends RestBaseController
         }
 
         $userQuery = Db::name("user");
+        
         if (Validate::is($data['username'], 'email')) {
             $userQuery = $userQuery->where('user_email', $data['username']);
         } else if (cmf_check_mobile($data['username'])) {
@@ -46,7 +47,6 @@ class PublicController extends RestBaseController
         if (empty($findUser)) {
             $this->error("用户不存在!");
         } else {
-
             switch ($findUser['user_status']) {
                 case 0:
                     $this->error('您已被拉黑!');
@@ -54,17 +54,18 @@ class PublicController extends RestBaseController
                     $this->error('账户还没有验证成功!');
             }
 
+            if($findUser['user_type'] != 1){
+               $this->error('您不是管理员,没有权限登陆');
+            }
+
             if (!cmf_compare_password($data['password'], $findUser['user_pass'])) {
                 $this->error("密码不正确!");
             }
         }
-
         $allowedDeviceTypes = ['mobile', 'android', 'iphone', 'ipad', 'web', 'pc', 'mac'];
-
         if (empty($data['device_type']) || !in_array($data['device_type'], $allowedDeviceTypes)) {
             $this->error("请求错误,未知设备!");
         }
-
         $userTokenQuery = Db::name("user_token")
             ->where('user_id', $findUser['id'])
             ->where('device_type', $data['device_type']);
@@ -90,14 +91,12 @@ class PublicController extends RestBaseController
                     'create_time' => $currentTime
                 ]);
         }
-
-
         if (empty($result)) {
             $this->error("登录失败!");
         }
-
-        $this->success("登录成功!", ['token' => $token]);
+        $this->success("登录成功!", ['token' => $token, 'username' => $findUser['user_login'], 'type' =>$findUser['user_type']]);
     }
+
 
     // 管理员退出
     public function logout()
