@@ -59,7 +59,6 @@
                    ref="addApplication">
             <el-form :label-position="labelPosition"
                      label-width="80px"
-                     :model="addForm"
                      class="formDialog">
                 <el-form-item label="应用名"
                               prop="name">
@@ -73,9 +72,10 @@
                 </el-form-item>
                 <el-form-item label="上传文件"
                               prop="file">
-                    <el-input v-model="addForm.file"
+                    <!-- <el-input v-model="addForm.file"
                               class="form_file"
-                              ref="formFileInput"></el-input>
+                              ref="formFileInput"
+                              value="这个是什么"></el-input> -->
                     <el-upload action="https://jsonplaceholder.typicode.com/posts/"
                                :before-upload="handleChange"
                                accept=".apk,.jpg"
@@ -89,6 +89,7 @@
                 <el-form-item label="版本说明"
                               prop="desc">
                     <el-input type="textarea"
+                              class="form_textarea"
                               placeholder="请输入更新内容"
                               v-model="addForm.desc"></el-input>
                 </el-form-item>
@@ -182,18 +183,18 @@ export default {
         },
         openDialog () {
             this.showDialog = true
-            this.$refs.formFileInput.values = 'XXXX.apk'
+            // const val = this.$refs.formFileInput.value
+            // console.log(val)
         },
         cancelDialog () {
             this.showDialog = false
         },
         handleChange (file, fileList) {
-
-            // this.fileList = fileList.slice(-1);
+            this.fileList = fileList.slice(-1);
         }
     },
     mounted () {
-        // const this.$refs.formFileInput
+
     },
 }
 </script>
@@ -203,6 +204,22 @@ display inline-block
 width 80px
 height 30px
 border none */
+.uploadFile >>> .el-upload--text
+    width 80px
+    height 32px
+    border none
+    float right
+.uploadFile >>> .el-upload-list
+    width 312px
+    border 1px solid #dcdfe6
+    border-radius 4px
+    float left
+    .el-upload-list__item:first-child
+        // height 100%
+        height 32px
+        margin-top 5px
+        &:hover
+            background-color #fff
 .userinfo
     padding 0 20px
     font-size 18px
@@ -234,13 +251,30 @@ border none */
                 // line-height 35px
     .userinfo-list
         padding 20px 0
-    .formDialog
-        padding 0 25px
-        .el-form-item
-            margin-bottom 24px
-            .el-input, .el-textarea
-                width 400px
-            .form_file
-                width 312px
+    .el-dialog__wrapper
+        // box-sizing border-box
+        .el-dialog__body
+            .formDialog
+                padding 0 25px
+                .el-form-item
+                    margin-bottom 24px
+                    .el-form-item__label
+                        font-size 16px
+                    .el-input, .el-textarea
+                        width 400px
+                        >>>.el-textarea__inner
+                            height 200px
+                            resize none
+                    .form_file
+                        width 312px
+                    &:last-child
+                        margin-bottom 0
+        .el-dialog__footer
+            margin-bottom 35px
+            .el-button
+                width 135px
+                height 40px
+                &:last-child
+                    margin-left 90px
 </style>
 
