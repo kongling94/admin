@@ -37,15 +37,15 @@ function _sp_helloworld3(){
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <![endif]-->
-<link rel="icon" href="/app_manage/server/public/themes/simpleboot3/public/assets/images/favicon.png" type="image/png">
-<link rel="shortcut icon" href="/app_manage/server/public/themes/simpleboot3/public/assets/images/favicon.png" type="image/png">
-<link href="/app_manage/server/public/themes/simpleboot3/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
-<link href="/app_manage/server/public/themes/simpleboot3/public/assets/simpleboot3/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
+<link rel="icon" href="/server/public/themes/simpleboot3/public/assets/images/favicon.png" type="image/png">
+<link rel="shortcut icon" href="/server/public/themes/simpleboot3/public/assets/images/favicon.png" type="image/png">
+<link href="/server/public/themes/simpleboot3/public/assets/simpleboot3/themes/simpleboot3/bootstrap.min.css" rel="stylesheet">
+<link href="/server/public/themes/simpleboot3/public/assets/simpleboot3/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
       type="text/css">
 <!--[if IE 7]>
-<link rel="stylesheet" href="/app_manage/server/public/themes/simpleboot3/public/assets/simpleboot3/font-awesome/4.4.0/css/font-awesome-ie7.min.css">
+<link rel="stylesheet" href="/server/public/themes/simpleboot3/public/assets/simpleboot3/font-awesome/4.4.0/css/font-awesome-ie7.min.css">
 <![endif]-->
-<link href="/app_manage/server/public/themes/simpleboot3/public/assets/css/style.css" rel="stylesheet">
+<link href="/server/public/themes/simpleboot3/public/assets/css/style.css" rel="stylesheet">
 <style>
     /*html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(1);}*/
     #backtotop {
@@ -69,16 +69,16 @@ function _sp_helloworld3(){
 <script type="text/javascript">
     //全局变量
     var GV = {
-        ROOT: "/app_manage/server/public/",
-        WEB_ROOT: "/app_manage/server/public/",
+        ROOT: "/server/public/",
+        WEB_ROOT: "/server/public/",
         JS_ROOT: "static/js/"
     };
 </script>
-<script src="/app_manage/server/public/themes/simpleboot3/public/assets/js/jquery-1.10.2.min.js"></script>
-<script src="/app_manage/server/public/themes/simpleboot3/public/assets/js/jquery-migrate-1.2.1.js"></script>
-<script src="/app_manage/server/public/static/js/wind.js"></script>
+<script src="/server/public/themes/simpleboot3/public/assets/js/jquery-1.10.2.min.js"></script>
+<script src="/server/public/themes/simpleboot3/public/assets/js/jquery-migrate-1.2.1.js"></script>
+<script src="/server/public/static/js/wind.js"></script>
 	
-    <link href="/app_manage/server/public/themes/simpleboot3/public/assets/css/slippry/slippry.css" rel="stylesheet">
+    <link href="/server/public/themes/simpleboot3/public/assets/css/slippry/slippry.css" rel="stylesheet">
     <style>
         .caption-wraper {
             position: absolute;
@@ -123,7 +123,7 @@ function _sp_helloworld3(){
 
     </style>
     <?php 
-    \think\Hook::listen('before_head_end',$temp5be4ec0fa0fce,null,false);
+    \think\Hook::listen('before_head_end',$temp5be8f8c5579e6,null,false);
  ?>
 </head>
 <body class="body-white">
@@ -137,15 +137,15 @@ function _sp_helloworld3(){
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/app_manage/server/public/"><?php echo (isset($theme_vars['company_name']) && ($theme_vars['company_name'] !== '')?$theme_vars['company_name']:'ThinkCMF'); ?></a>
+            <a class="navbar-brand" href="/server/public/"><?php echo (isset($theme_vars['company_name']) && ($theme_vars['company_name'] !== '')?$theme_vars['company_name']:'ThinkCMF'); ?></a>
         </div>
 
         <div class="collapse navbar-collapse active" id="bs-example-navbar-collapse-1">
             <ul id="main-menu" class="nav navbar-nav">
                 <?php
 
-function __parse_navigation51091a570e1ed5c491cb8144b50c1248($menus,$level=1){
-$_parse_navigation_func_name = '__parse_navigation51091a570e1ed5c491cb8144b50c1248';
+function __parse_navigation2b5b0f1fa381aebb78351b3596d5fcef($menus,$level=1){
+$_parse_navigation_func_name = '__parse_navigation2b5b0f1fa381aebb78351b3596d5fcef';
 if(is_array($menus) || $menus instanceof \think\Collection || $menus instanceof \think\Paginator): if( count($menus)==0 ) : echo "" ;else: foreach($menus as $key=>$menu): if(empty($menu['children'])): if($level > 1): ?>
                             <li class="menu-item menu-item-level-<?php echo $level; ?> levelgt1">
                                 <a href="<?php echo (isset($menu['href']) && ($menu['href'] !== '')?$menu['href']:''); ?>" target="<?php echo (isset($menu['target']) && ($menu['target'] !== '')?$menu['target']:''); ?>">
@@ -177,9 +177,9 @@ if(is_array($menus) || $menus instanceof \think\Collection || $menus instanceof 
     $navMenuModel = new \app\admin\model\NavMenuModel();
     $menus = $navMenuModel->navMenusTreeArray('',0);
 if(''==''): ?>
-    <?php echo __parse_navigation51091a570e1ed5c491cb8144b50c1248($menus); else: ?>
+    <?php echo __parse_navigation2b5b0f1fa381aebb78351b3596d5fcef($menus); else: ?>
     < id="main-navigation" class="nav navbar-nav navbar-nav-custom">
-        <?php echo __parse_navigation51091a570e1ed5c491cb8144b50c1248($menus); ?>
+        <?php echo __parse_navigation2b5b0f1fa381aebb78351b3596d5fcef($menus); ?>
     </>
 <?php endif; ?>
 
@@ -194,7 +194,7 @@ if(''==''): ?>
                 <li class="dropdown user login">
                     <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
                         <?php $user=cmf_get_current_user(); if(empty($user['avatar'])): ?>
-                            <img src="/app_manage/server/public/themes/simpleboot3/public/assets/images/headicon.png" class="headicon">
+                            <img src="/server/public/themes/simpleboot3/public/assets/images/headicon.png" class="headicon">
                             <?php else: ?>
                             <img src="<?php echo cmf_get_user_avatar_url($user['avatar']); ?>" class="headicon" width="30"/>
                         <?php endif; ?>
@@ -208,7 +208,7 @@ if(''==''): ?>
                 </li>
                 <li class="dropdown user offline" style="display: list-item;">
                     <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-                        <img src="/app_manage/server/public/themes/simpleboot3/public/assets/images/headicon.png" class="headicon">
+                        <img src="/server/public/themes/simpleboot3/public/assets/images/headicon.png" class="headicon">
                         登录<b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu pull-right">
@@ -251,19 +251,19 @@ if(count($__SLIDE_ITEMS__) == 0): ?>
             <div class="caption-wraper">
                 <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
             </div>
-            <a href=""><img src="/app_manage/server/public/themes/simpleboot3/public/assets/images/demo/1.jpg" alt=""></a>
+            <a href=""><img src="/server/public/themes/simpleboot3/public/assets/images/demo/1.jpg" alt=""></a>
         </li>
         <li>
             <div class="caption-wraper">
                 <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
             </div>
-            <a href=""><img src="/app_manage/server/public/themes/simpleboot3/public/assets/images/demo/2.jpg" alt=""></a>
+            <a href=""><img src="/server/public/themes/simpleboot3/public/assets/images/demo/2.jpg" alt=""></a>
         </li>
         <li>
             <div class="caption-wraper">
                 <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
             </div>
-            <a href=""><img src="/app_manage/server/public/themes/simpleboot3/public/assets/images/demo/3.jpg" alt=""></a>
+            <a href=""><img src="/server/public/themes/simpleboot3/public/assets/images/demo/3.jpg" alt=""></a>
         </li>
     
 <?php endif; ?>
@@ -283,7 +283,7 @@ if(count($__SLIDE_ITEMS__) == 0): ?>
         <?php 
             $features_count = count($widget['vars']['features']);
             $rows = ceil($features_count/3);
-         $__FOR_START_634638035__=1;$__FOR_END_634638035__=$rows;for($row=$__FOR_START_634638035__;$row <= $__FOR_END_634638035__;$row+=1){ 
+         $__FOR_START_375017140__=1;$__FOR_END_375017140__=$rows;for($row=$__FOR_START_375017140__;$row <= $__FOR_END_375017140__;$row+=1){ 
                 $first_row = ($row-1)*3;
                 $features = array_slice($widget['vars']['features'],$first_row,3);
              ?>
@@ -329,7 +329,7 @@ $__PAGE_VAR_NAME__ = isset($articles_data['page'])?$articles_data['page']:'';
                             <div class="item-image">
                                 <a href="<?php echo cmf_url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['category_id'])); ?>">
                                     <?php if(isset($vo['more']['thumbnail'])): if(empty($vo['more']['thumbnail']) || (($vo['more']['thumbnail'] instanceof \think\Collection || $vo['more']['thumbnail'] instanceof \think\Paginator ) && $vo['more']['thumbnail']->isEmpty())): ?>
-                                            <img src="/app_manage/server/public/themes/simpleboot3/public/assets/images/default-thumbnail.png"
+                                            <img src="/server/public/themes/simpleboot3/public/assets/images/default-thumbnail.png"
                                                  class="img-responsive"
                                                  alt="">
                                             <?php else: ?>
@@ -337,7 +337,7 @@ $__PAGE_VAR_NAME__ = isset($articles_data['page'])?$articles_data['page']:'';
                                                  class="img-responsive"
                                                  alt="">
                                         <?php endif; else: ?>
-                                        <img src="/app_manage/server/public/themes/simpleboot3/public/assets/images/default-thumbnail.png"
+                                        <img src="/server/public/themes/simpleboot3/public/assets/images/default-thumbnail.png"
                                              class="img-responsive"
                                              alt="">
                                     <?php endif; ?>
@@ -369,7 +369,7 @@ $__PAGE_VAR_NAME__ = isset($articles_data['page'])?$articles_data['page']:'';
 <hr>
 <div id="footer">
     <?php 
-    \think\Hook::listen('footer_start',$temp5be4ec0fa1079,null,false);
+    \think\Hook::listen('footer_start',$temp5be8f8c557a4b,null,false);
  ?>
     <div class="links">
         <?php
@@ -396,7 +396,7 @@ if(is_array($__LINKS__) || $__LINKS__ instanceof \think\Collection || $__LINKS__
             <?php else: ?>
             请在后台设置"网站信息"设置"ICP备"
         <?php endif; if(!(empty($site_info['site_gwa']) || (($site_info['site_gwa'] instanceof \think\Collection || $site_info['site_gwa'] instanceof \think\Paginator ) && $site_info['site_gwa']->isEmpty()))): ?>
-            <img src="/app_manage/server/public/themes/simpleboot3/public/assets/images/ghs.png">
+            <img src="/server/public/themes/simpleboot3/public/assets/images/ghs.png">
             <a href="http://beian.gov.cn/" target="_blank"><?php echo $site_info['site_gwa']; ?></a>
             <?php else: ?>
             请在后台设置"网站信息"设置"公网安备"
@@ -414,8 +414,8 @@ if(is_array($__LINKS__) || $__LINKS__ instanceof \think\Collection || $__LINKS__
 <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/app_manage/server/public/themes/simpleboot3/public/assets/simpleboot3/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/app_manage/server/public/static/js/frontend.js"></script>
+    <script src="/server/public/themes/simpleboot3/public/assets/simpleboot3/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/server/public/static/js/frontend.js"></script>
 	<script>
 	$(function(){
 		$("#main-menu li.dropdown").hover(function(){
@@ -485,7 +485,7 @@ if(is_array($__LINKS__) || $__LINKS__ instanceof \think\Collection || $__LINKS__
 	</script>
 
 
-<script src="/app_manage/server/public/themes/simpleboot3/public/assets/js/slippry.min.js"></script>
+<script src="/server/public/themes/simpleboot3/public/assets/js/slippry.min.js"></script>
 <script>
     $(function () {
         $("#home-slider").slippry({
@@ -501,7 +501,7 @@ if(is_array($__LINKS__) || $__LINKS__ instanceof \think\Collection || $__LINKS__
     });
 </script>
 <?php 
-    \think\Hook::listen('before_body_end',$temp5be4ec0fa10ed,null,false);
+    \think\Hook::listen('before_body_end',$temp5be8f8c557aa0,null,false);
  ?>
 </body>
 </html>
