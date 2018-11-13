@@ -14,15 +14,16 @@
 
             <el-table-column prop="handle"
                              label="操作"
-                             width="150"
+                             width="200"
                              v-if="showControl">
                 <template slot-scope="scope">
                     <el-button @click="handleUpdata(scope.row)"
-                               type="text"
-                               size="normal">版本更新</el-button>
-                    <el-button @click="handleUpdata(scope.row)"
-                               type="text"
-                               size="normal">复制链接</el-button>
+                               type="primary"
+                               plain
+                               size="mini">版本更新</el-button>
+                    <el-button @click="copyAddress(scope.$index,scope.row)"
+                               size="mini"
+                               type="info">复制链接</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -227,6 +228,16 @@ export default {
         }
     },
     methods: {
+        copyAddress (index, row) {
+            let data = this.tableHeader[index]
+            this.$copyText(data.href).then((res) => {
+                alert("复制成功")
+                console.log(res)
+            }, (err) => {
+                alert("复制失败")
+                console.log(err)
+            })
+        },
         handleUpdata (row) {
             alert("这边逻辑是啥？")
             console.log()
