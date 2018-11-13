@@ -1,0 +1,396 @@
+---------------------------------------------------------------
+[ 2018-11-13T10:22:35+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.514000s][吞吐率：1.95req/s] [内存消耗：2,692.60kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.043000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.009000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='88bcbfe60e9b53d3abcbcb97bcfbff9b88bcbfe60e9b53d3abcbcb97bcfbff9b',`expire_time`=1557627755,`create_time`=1542075755  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.046000s ]
+---------------------------------------------------------------
+[ 2018-11-13T16:14:26+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：1.119000s][吞吐率：0.89req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.197000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='6dc13ff12883abcb0c1f13a1ac1b21a66dc13ff12883abcb0c1f13a1ac1b21a6',`expire_time`=1557648865,`create_time`=1542096865  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.794000s ]
+---------------------------------------------------------------
+[ 2018-11-13T16:14:28+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：5.596000s][吞吐率：0.18req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.044000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.009000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:5.210000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='1eb803c701066dd0ee91bd5ea33a636d1eb803c701066dd0ee91bd5ea33a636d',`expire_time`=1557648868,`create_time`=1542096868  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-11-13T16:15:36+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.871000s][吞吐率：1.15req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='e7931681a3289fb0382f62db2fe11d24e7931681a3289fb0382f62db2fe11d24',`expire_time`=1557648935,`create_time`=1542096935  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.803000s ]
+---------------------------------------------------------------
+[ 2018-11-13T16:16:07+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.140000s][吞吐率：7.14req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='aef19b570f955f56a6af3c5bfd7d5a5caef19b570f955f56a6af3c5bfd7d5a5c',`expire_time`=1557648967,`create_time`=1542096967  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.051000s ]
+---------------------------------------------------------------
+[ 2018-11-13T16:16:15+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.069000s][吞吐率：14.49req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='12a35e861189e1b85bd0bb3aee58fc8312a35e861189e1b85bd0bb3aee58fc83',`expire_time`=1557648975,`create_time`=1542096975  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-13T16:16:22+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='615f5ffa78c81fb7a682853dd4cda951615f5ffa78c81fb7a682853dd4cda951',`expire_time`=1557648982,`create_time`=1542096982  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.013000s ]
+---------------------------------------------------------------
+[ 2018-11-13T16:16:37+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.089000s][吞吐率：11.24req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='10699d7eca438bc9ac1ec2a23449c74e10699d7eca438bc9ac1ec2a23449c74e',`expire_time`=1557648997,`create_time`=1542096997  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-11-13T16:16:40+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.058000s][吞吐率：17.24req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='2248ac38f7ba1002656e5c74fd839f4c2248ac38f7ba1002656e5c74fd839f4c',`expire_time`=1557649000,`create_time`=1542097000  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.002000s ]

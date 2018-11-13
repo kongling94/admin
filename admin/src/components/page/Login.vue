@@ -69,7 +69,10 @@ export default {
                 password: 'a123456',
                 device_type: 'web'
             }).then((res) => {
-                console.log(res.data)
+                res = res.data
+                if (res.code === 1) {
+                    console.log(res.data)
+                }
             })
         }
     },

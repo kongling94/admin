@@ -15,40 +15,8 @@
             </el-col>
         </el-row>
         <div class="userinfo-list">
-            <el-table :data="tableData"
-                      style="width: 100%"
-                      :header-cell-style="styleHeaderBg"
-                      :cell-style="styleCell"
-                      :row-class-name="styleRowBg">
-                <el-table-column prop="uid"
-                                 label="UID"
-                                 width="150">
-                </el-table-column>
-                <el-table-column prop="appName"
-                                 label="APP名">
-                </el-table-column>
-                <el-table-column prop="currentVersion"
-                                 label="当前版本">
-                </el-table-column>
-                <el-table-column prop="releaseTime"
-                                 label="发布时间">
-                </el-table-column>
-                <el-table-column prop="recentUpdates"
-                                 label="最近更新">
-                </el-table-column>
-                <el-table-column prop="downloads"
-                                 label="下载量">
-                </el-table-column>
-                <el-table-column prop="handle"
-                                 label="操作"
-                                 width="150">
-                    <template slot-scope="scope">
-                        <el-button @click="handleUpdata(scope.row)"
-                                   type="text"
-                                   size="normal">版本更新</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
+            <tablelist :tableHeader="tableHeader"
+                       :showControl=true></tablelist>
         </div>
         <el-dialog title="添加应用"
                    :visible.sync="showDialog"
@@ -105,9 +73,12 @@
 
 </template>
 <script>
+import tablelist from './tableList'
 export default {
     name: 'userInfo',
-
+    components: {
+        tablelist
+    },
     data () {
         return {
             showDialog: false,
@@ -118,6 +89,32 @@ export default {
                 file: '',
                 desc: ''
             },
+            tableHeader: [
+                {
+                    label: 'UID',
+                    prop: 'uid'
+                },
+                {
+                    label: 'APP名',
+                    prop: 'appName'
+                },
+                {
+                    label: '当前版本',
+                    prop: 'currentVersion'
+                },
+                {
+                    label: '发布时间',
+                    prop: 'releaseTime'
+                },
+                {
+                    label: '最近更新',
+                    prop: 'recentUpdates'
+                },
+                {
+                    label: '下载量',
+                    prop: 'downloads'
+                },
+            ],
             formRules: {
                 name: [
                     { required: true, message: '请输入名称', trigger: 'blur' },
@@ -136,51 +133,10 @@ export default {
             fileList: [{
                 name: 'firefly.apk',
                 url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
-            }],
-            tableData: [
-                {
-                    uid: '001',
-                    appName: '王小虎',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 1021,
-
-                },
-                {
-                    uid: '002',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-
-                },
-                {
-                    uid: '003',
-                    appName: '赵小狗',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 3021,
-
-                }
-            ]
+            }]
         }
     },
     methods: {
-        styleHeaderBg ({ row, rowIndex }) {
-            return "background-color:#e7eff5;font-size:14px;font-weight:normal;color:#959595;"
-        },
-        styleRowBg ({ row, rowIndex }) {
-            return "background-color:#f5f9fb;"
-        },
-        styleCell ({ row, rowIndex }) {
-            return "font-size:14px;color:#959595;"
-        },
-        handleUpdata (row) {
-            alert("这边逻辑是啥？")
-        },
         openDialog () {
             this.showDialog = true
             // const val = this.$refs.formFileInput.value
@@ -211,6 +167,7 @@ border none */
     float right
 .uploadFile >>> .el-upload-list
     width 312px
+    height 32px
     border 1px solid #dcdfe6
     border-radius 4px
     float left
@@ -221,12 +178,11 @@ border none */
         &:hover
             background-color #fff
 .userinfo
-    padding 0 20px
-    font-size 18px
     .userinfo-title
         height 55px
         line-height 35px
         padding 10px 0
+        margin 0 20px
         border-bottom 1px solid #e6e5e6
         .title_text
             margin-top 5px
@@ -236,10 +192,10 @@ border none */
                 &::after
                     content ''
                     position absolute
-                    bottom -13px
+                    bottom -14px
                     left 0
                     width calc(100% + 5px)
-                    height 1px
+                    height 2px
                     background-color #52b2fb
         .title_addBtn
             text-align right
