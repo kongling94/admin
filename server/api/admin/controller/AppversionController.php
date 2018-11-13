@@ -20,6 +20,8 @@ class AppversionController extends RestBaseController{
      $this->success('查询成功',['list' => $data]); 
   }
 
+  
+
    public function add(){
      
       $validate = new Validate([
