@@ -38,8 +38,8 @@ export default {
     data: function () {
         return {
             ruleForm: {
-                username: 'admin',
-                password: '123123'
+                username: '',
+                password: ''
             },
             rules: {
                 username: [
@@ -65,13 +65,16 @@ export default {
         },
         login () {
             this.$axios.post("/api/admin/public/login", {
-                username: 'admin',
-                password: 'a123456',
+                username: this.ruleForm.username,
+                password: this.ruleForm.password,
                 device_type: 'web'
             }).then((res) => {
                 res = res.data
                 if (res.code === 1) {
-                    console.log(res.data)
+                    this.$message({
+                        message: res.msg,
+                        type: 'success'
+                    });
                 }
             })
         }
