@@ -24,7 +24,7 @@ class AppversionController extends RestBaseController{
      
       $validate = new Validate([
             'name'      => 'require',
-            'app_id'    => 'require',
+            'version_name'    => 'require',
             'content'   => 'require'
         ]);
 
@@ -36,7 +36,7 @@ class AppversionController extends RestBaseController{
        $info = $info->move(ROOT_PATH . 'public' . DS . 'upload');
        $validate->message([
             'name.require'     => '请填写应用名称!',
-            'app_id.require'   => '请填写版本号!',
+            'version_name.require'   => '请填写版本号!',
             'content.require'  => '请填写版本说明!'
         ]);
 
@@ -48,18 +48,26 @@ class AppversionController extends RestBaseController{
        if($info){
          $saveName     = $info->getSaveName();
          
-         Db::name('app_version')->insert([
-                'app_id'       => $_POST['app_id'],
+         Db::name('app')->insert([
                 'name'         => $_POST['name'],
-                'content'      => $_POST['content'],
-                'file'         => $saveName,
-                'update_time'  => time(),
-                'create_time'  => time()
+                'create_time'  => time(),
+                'update_time'  => time()
             ]);
          
-         $id = Db::name('app_version')->getLastInsID();
-
-         $this->success('添加成功',['id' => $id]);
+         $appid = Db::name('app')->getLastInsID();
+         
+         if($appid){
+            Db::name('app_version')->insert([
+                'app_id'           => $appid,
+                'version_name'     => $_POST['version_name'],
+                'create_time'      => time(),
+                'update_time'      => time(),
+                'content'          => $_POST['content'],
+                'file'             => $saveName 
+            	]);                         
+         }
+         
+         $this->success('添加成功',['id' => $appid]);
        }else{
        	 $this->error($file->getError());
        }

@@ -2011,3 +2011,162 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
 [ sql ] [ SQL ] SHOW COLUMNS FROM `am_app_version` [ RunTime:0.002000s ]
 [ sql ] [ SQL ] SELECT * FROM `am_app_version` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:56:56+08:00 ] 127.0.0.1 POST /server/public/api/admin/appversion/add
+[ info ] appmanage.net/server/public/api/admin/appversion/add [运行时间：0.203012s][吞吐率：4.93req/s] [内存消耗：2,231.09kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.123007s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'appversion',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '171',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------477682902866805485103714',
+  'postman-token' => 'bfe3aa9a-120f-4a2e-8102-caa3359dee89',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'MediaStation',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\AppversionController->add[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\AppversionController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017001s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_hook` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `hook` FROM `am_hook` WHERE  `type` = 1 OR (  `type` = 3  AND ( `app` = '' or `app` = 'cmf' ) ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_hook_plugin` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `am_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_init','app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.002000s ]
+[ error ] [1]Call to a member function validate() on null[D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\AppversionController.php:32]
+---------------------------------------------------------------
+[ 2018-11-12T17:57:52+08:00 ] 127.0.0.1 POST /server/public/api/admin/appversion/add
+[ info ] appmanage.net/server/public/api/admin/appversion/add [运行时间：0.185011s][吞吐率：5.41req/s] [内存消耗：2,272.19kb] [文件加载：64]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'appversion',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '84173',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------898941661817203075817354',
+  'postman-token' => '4575cbb8-6e5d-4832-ac9a-f73e7a0e3778',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'MediaStation',
+  'version_name' => 'v1.0.3',
+  'content' => '1234',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\AppversionController->add[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\AppversionController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_app` [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value[D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2018-11-12T18:00:02+08:00 ] 127.0.0.1 POST /server/public/api/admin/appversion/add
+[ info ] appmanage.net/server/public/api/admin/appversion/add [运行时间：0.164009s][吞吐率：6.10req/s] [内存消耗：2,271.05kb] [文件加载：64]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'appversion',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '84173',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------323966286245147929076009',
+  'postman-token' => 'b9d8269d-e006-46e6-80d4-0918fb313724',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'MediaStation',
+  'version_name' => 'v1.0.3',
+  'content' => '1234',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\AppversionController->add[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\AppversionController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_app` [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value[D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2018-11-12T18:03:22+08:00 ] 127.0.0.1 POST /server/public/api/admin/appversion/add
+[ info ] appmanage.net/server/public/api/admin/appversion/add [运行时间：0.101006s][吞吐率：9.90req/s] [内存消耗：2,241.88kb] [文件加载：59]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'appversion',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '84173',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'appmanage.net',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/6.1.6',
+  'content-type' => 'multipart/form-data; boundary=--------------------------892760790374024214450925',
+  'postman-token' => '895ed447-99e7-44a9-85ed-7c502c1d687e',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'MediaStation',
+  'version_name' => 'v1.0.3',
+  'content' => '1234',
+)
+[ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\AppversionController->add[ D:\WWW\PHPTutorial\WWW\app_manage\server\api\admin\controller\AppversionController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_app` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `am_app` (`name` , `create_time` , `update_time`) VALUES ('MediaStation' , 1542017002 , 1542017002) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_app_version` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `am_app_version` (`app_id` , `version_name` , `create_time` , `update_time` , `content` , `file`) VALUES (1 , 'v1.0.3' , 1542017002 , 1542017002 , '1234' , '20181112\\66c8a2074f34ea782aa5108ec97728ba.jpg') [ RunTime:0.010001s ]
