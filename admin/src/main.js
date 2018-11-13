@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import axios from 'axios';
+import VueClipboard from 'vue-clipboard2'
 import ElementUI from 'element-ui';
 import ECharts from 'vue-echarts/components/ECharts.vue';
 import 'element-ui/lib/theme-chalk/index.css'; // 默认主题
@@ -10,7 +11,8 @@ import '../static/css/icon.css';
 import 'babel-polyfill';
 
 Vue.use(ElementUI, { size: 'small' });
-// Vue.component('v-chart', ECharts);
+Vue.use(VueClipboard)
+
 Vue.prototype.$axios = axios;
 
 //使用钩子函数对路由进行权限跳转

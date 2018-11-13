@@ -20,6 +20,9 @@
                     <el-button @click="handleUpdata(scope.row)"
                                type="text"
                                size="normal">版本更新</el-button>
+                    <el-button @click="handleUpdata(scope.row)"
+                               type="text"
+                               size="normal">复制链接</el-button>
                 </template>
             </el-table-column>
         </el-table>
