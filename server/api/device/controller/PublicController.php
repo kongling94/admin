@@ -64,9 +64,13 @@ class PublicController extends RestBaseController
         $findDeviceCount = Db::name("device")->where($findDeviceWhere)->count();
 
         if ($findDeviceCount > 0) {
-            $this->error("此应用已存在!");
+            $this->error("此应用已激活!");
         }
 
+        $is_app = Db::name('app')->where(['name'=>$data['app_name']])->find();
+        if(!$is_app){
+            $this->error("应用不存在!");
+        }
         // $user['create_time'] = time();
         // $user['user_status'] = 1;
         // $user['user_type']   = 2;
