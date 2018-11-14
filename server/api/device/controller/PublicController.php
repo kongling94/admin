@@ -77,9 +77,22 @@ class PublicController extends RestBaseController
         // $user['user_pass']   = cmf_password($data['password']);
 
         $data['create_time'] = time();
-        $data['ip'] = get_client_ip();
+        $data['ip'] = $data['ip'];
         $data['status'] = 1;
 
+
+        $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$data['ip'];
+        $ip_data=json_decode(file_get_contents($url), true);
+        
+        if($ip_data && $ip_data['code'] == 0){
+            $data['country'] = $ip_data['data']['country'];
+            $data['area'] = $ip_data['data']['area'];
+            $data['region'] = $ip_data['data']['region'];
+            $data['city'] = $ip_data['data']['city'];
+            $data['county'] = $ip_data['data']['county'];
+            $data['isp'] = $ip_data['data']['isp'];
+        }
+        // dump($ip_data);exit();
         $result = Db::name("device")->insert($data);
 
 
