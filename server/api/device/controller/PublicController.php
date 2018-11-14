@@ -14,19 +14,26 @@ use cmf\controller\RestBaseController;
 
 class PublicController extends RestBaseController
 {
-    // 用户注册
+    // 设备注册
     public function register()
     {
         $validate = new Validate([
-            'username'          => 'require',
-            'password'          => 'require',
-            'verification_code' => 'require'
+            'app_name'          => 'require',
+            'device_name'       => 'require',
+            'sn'                => 'require',
+            'ip'                => 'require',
+            'longitude'         => 'require',
+            'latitude'          => 'require',
         ]);
 
         $validate->message([
-            'username.require'          => '请输入手机号,邮箱!',
-            'password.require'          => '请输入您的密码!',
-            'verification_code.require' => '请输入数字验证码!'
+            'app_name.require'          => '应用名为空',
+            'device_name.require'       => '设备名为空',
+            'sn.require'                => '序列号为空',
+            'ip.require'                => 'ip为空',
+            'longitude.require'         => '经度为空',
+            'latitude.require'          => '纬度为空',
+
         ]);
 
         $data = $this->request->param();
@@ -36,42 +43,51 @@ class PublicController extends RestBaseController
 
         $user = [];
 
-        $findUserWhere = [];
+        $findDeviceWhere['sn'] = $data['sn'];
+        $findDeviceCount['app_name'] = $data['app_name'];
 
-        if (Validate::is($data['username'], 'email')) {
-            $user['user_email']          = $data['username'];
-            $findUserWhere['user_email'] = $data['username'];
-        } else if (cmf_check_mobile($data['username'])) {
-            $user['mobile']          = $data['username'];
-            $findUserWhere['mobile'] = $data['username'];
-        } else {
-            $this->error("请输入正确的手机或者邮箱格式!");
+        // if (Validate::is($data['username'], 'email')) {
+        //     $user['user_email']          = $data['username'];
+        //     $findDeviceWhere['user_email'] = $data['username'];
+        // } else if (cmf_check_mobile($data['username'])) {
+        //     $user['mobile']          = $data['username'];
+        //     $findDeviceWhere['mobile'] = $data['username'];
+        // } else {
+        //     $this->error("请输入正确的手机或者邮箱格式!");
+        // }
+
+        // $errMsg = cmf_check_verification_code($data['username'], $data['verification_code']);
+        // if (!empty($errMsg)) {
+        //     $this->error($errMsg);
+        // }
+
+        $findDeviceCount = Db::name("device")->where($findDeviceWhere)->count();
+
+        if ($findDeviceCount > 0) {
+            $this->error("此应用已激活!");
         }
 
-        $errMsg = cmf_check_verification_code($data['username'], $data['verification_code']);
-        if (!empty($errMsg)) {
-            $this->error($errMsg);
+        $is_app = Db::name('app')->where(['name'=>$data['app_name']])->find();
+        if(!$is_app){
+            $this->error("应用不存在!");
         }
+        // $user['create_time'] = time();
+        // $user['user_status'] = 1;
+        // $user['user_type']   = 2;
+        // $user['user_pass']   = cmf_password($data['password']);
 
-        $findUserCount = Db::name("user")->where($findUserWhere)->count();
+        $data['create_time'] = time();
+        $data['ip'] = get_client_ip();
+        $data['status'] = 1;
 
-        if ($findUserCount > 0) {
-            $this->error("此账号已存在!");
-        }
-
-        $user['create_time'] = time();
-        $user['user_status'] = 1;
-        $user['user_type']   = 2;
-        $user['user_pass']   = cmf_password($data['password']);
-
-        $result = Db::name("user")->insert($user);
+        $result = Db::name("device")->insert($data);
 
 
         if (empty($result)) {
-            $this->error("注册失败,请重试!");
+            $this->error("应用激活失败,请重试!");
         }
 
-        $this->success("注册并激活成功,请登录!");
+        $this->success("应用激活成功!");
 
     }
 
