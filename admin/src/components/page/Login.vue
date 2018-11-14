@@ -18,14 +18,14 @@
                     <el-input type="password"
                               placeholder="password"
                               v-model="ruleForm.password"
-                              @keyup.enter.native="submitForm('ruleForm')">
+                              @keyup.enter.native="login('ruleForm')">
                         <el-button slot="prepend"
                                    icon="el-icon-lx-lock"></el-button>
                     </el-input>
                 </el-form-item>
                 <div class="login-btn">
                     <el-button type="primary"
-                               @click="submitForm('ruleForm')">登录</el-button>
+                               @click="login('ruleForm')">登录</el-button>
                 </div>
                 <p class="login-tips">Tips : 用户名和密码随便填。</p>
             </el-form>
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import { post, get } from 'api'
+import { mapActions } from 'vuex';
 export default {
     data: function () {
         return {
@@ -52,11 +54,14 @@ export default {
         }
     },
     methods: {
+        ...mapActions([
+            'setLoginInfo'
+        ]),
+        //提交登录
         submitForm (formName) {
             this.$refs[formName].validate((valid) => {
                 if (valid) {
-                    localStorage.setItem('ms_username', this.ruleForm.username);
-                    this.$router.push('/');
+                    this.login()
                 } else {
                     console.log('error submit!!');
                     return false;
@@ -64,23 +69,27 @@ export default {
             });
         },
         login () {
-            this.$axios.post("/api/admin/public/login", {
+            this.$post("/admin/public/login", {
                 username: this.ruleForm.username,
                 password: this.ruleForm.password,
                 device_type: 'web'
             }).then((res) => {
-                res = res.data
                 if (res.code === 1) {
                     this.$message({
                         message: res.msg,
                         type: 'success'
                     });
+                    const data = res.data
+                    data.deviceType = localStorage.getItem("deviceType")
+                    this.setLoginInfo(data)
+                    // localStorage.setItem('username', this.ruleForm.username);
+                    this.$router.push('/');
                 }
             })
         }
     },
     created () {
-        this.login()
+
     },
 }
 </script>

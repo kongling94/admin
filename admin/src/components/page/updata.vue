@@ -137,6 +137,11 @@ export default {
         }
     },
     methods: {
+        _getData () {
+            this.$post("/admin/app").then(res => {
+                console.log(res)
+            })
+        },
         openDialog () {
             this.showDialog = true
             // const val = this.$refs.formFileInput.value
@@ -150,7 +155,7 @@ export default {
         }
     },
     mounted () {
-
+        this._getData()
     },
 }
 </script>
