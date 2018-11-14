@@ -4,7 +4,8 @@
              class="tabs">
         <el-tab-pane label="用户列表"
                      name="userList">
-            <tablelist :tableHeader="tableHeader"></tablelist>
+            <tablelist :tableHeader="tableHeader"
+                       :tableData="userList"></tablelist>
         </el-tab-pane>
         <el-tab-pane label="用户地图"
                      name="userMap">
@@ -23,34 +24,35 @@ export default {
     },
     data () {
         return {
+            userList: [],
             tableHeader: [
                 {
                     label: 'UID',
-                    prop: 'uid'
+                    prop: 'id'
                 },
                 {
                     label: 'APP名',
-                    prop: 'appName'
+                    prop: 'app_name'
                 },
                 {
                     label: '设备名',
-                    prop: 'DeviceName'
+                    prop: 'device_name'
                 },
                 {
                     label: '序列号',
-                    prop: 'serialNumber'
+                    prop: 'sn'
                 },
                 {
                     label: '地区',
-                    prop: 'region'
+                    prop: 'country'
                 },
                 {
                     label: '激活时间',
-                    prop: 'ActivationTime'
+                    prop: 'create_time'
                 },
                 {
                     label: '已用时间',
-                    prop: 'ElapsedTime'
+                    prop: 'used_time'
                 },
                 {
                     label: 'IP',
@@ -58,16 +60,26 @@ export default {
                 },
                 {
                     label: '备注',
-                    prop: 'remark'
+                    prop: 'longitude'
                 }
             ]
         }
     },
     methods: {
+        _getUserData () {
+            this.$post('/device/list').then(res => {
+                if (res.code === 1) {
+                    this.userList = res.data.list
+                }
+            })
+        },
         handleClick (tab, event) {
             // console.log(tab, event);
         }
-    }
+    },
+    mounted () {
+        this._getUserData()
+    },
 }
 </script>
 <style lang="stylus" scoped>

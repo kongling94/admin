@@ -1,6 +1,7 @@
 <template>
     <div class="tableList">
-        <el-table :data="tableData"
+        <el-table v-show="tableData"
+                  :data="currentPageData"
                   style="width: 100%"
                   :header-cell-style="styleHeaderBg"
                   :cell-style="styleCell"
@@ -19,11 +20,11 @@
                 <template slot-scope="scope">
                     <el-button @click="handleUpdata(scope.row)"
                                type="primary"
-                               plain
                                size="mini">版本更新</el-button>
                     <el-button @click="copyAddress(scope.$index,scope.row)"
-                               size="mini"
-                               type="info">复制链接</el-button>
+                               type="info"
+                               size="mini">复制链接</el-button>
+
                 </template>
             </el-table-column>
         </el-table>
@@ -37,11 +38,16 @@
     </div>
 </template>
 <script>
+import { Message } from 'element-ui'
 export default {
     name: 'tableList',
     props: {
         tableHeader: {
             type: Array
+        },
+        tableData: {
+            type: Array,
+            default: []
         },
         showControl: {
             type: Boolean,
@@ -52,195 +58,26 @@ export default {
         return {
             page: 1,
             pageSize: 10,
-            // tableHeader: [],
-            totalData: [
-                {
-                    uid: '001',
-                    appName: '王小虎',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 1021,
-                },
-                {
-                    uid: '002',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '003',
-                    appName: '赵小狗',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 3021,
-                },
-                {
-                    uid: '004',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '005',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '006',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '007',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '008',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                }, {
-                    uid: '009',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '010',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '011',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '012',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '013',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '014',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '015',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '016',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021,
-                },
-                {
-                    uid: '017',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021
-                },
-                {
-                    uid: '018',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021
-                },
-                {
-                    uid: '019',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021
-                },
-                {
-                    uid: '020',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021
-                },
-                {
-                    uid: '021',
-                    appName: '李小猪',
-                    currentVersion: '1.25',
-                    releaseTime: '2017-05-06',
-                    recentUpdates: '2018-09-05',
-                    downloads: 13021
-                }
-            ],
-            tableData: [
-
-            ]
+            totalData: [],
+            currentPageData: []
         }
     },
     methods: {
         copyAddress (index, row) {
-            let data = this.tableHeader[index]
-            this.$copyText(data.href).then((res) => {
-                alert("复制成功")
-                console.log(res)
+            this.$copyText(row.link).then((res) => {
+                Message({
+                    message: '复制成功',
+                    type: 'success'
+                })
             }, (err) => {
-                alert("复制失败")
-                console.log(err)
+                Message({
+                    message: '复制失败',
+                    type: 'error'
+                })
             })
         },
         handleUpdata (row) {
             alert("这边逻辑是啥？")
-            console.log()
         },
         styleHeaderBg ({ row, rowIndex }) {
             return "background-color:#e7eff5;font-size:14px;font-weight:normal;color:#959595;"
@@ -252,24 +89,32 @@ export default {
             return "font-size:14px;color:#959595;"
         },
         handleCurrentChange (curPage) {
-            // console.log(curPage)
             let total = this.totalData
             let maxPage = Math.floor(total / this.pageSize);
             let minPage = curPage < 1 ? 1 : curPage;
             curPage = curPage > maxPage ? maxPage : curPage
-            return this.tableData = total.slice((curPage - 1) * this.pageSize, curPage * this.pageSize)
-
+            return this.currentPageData = total.slice((curPage - 1) * this.pageSize, curPage * this.pageSize)
         }
     },
     watch: {
-        tableData (newVal, oldVal) {
-            this.tableData = newVal
+        currentPageData (newVal) {
+            this.currentPageData = newVal
         }
     },
-    mounted () {
-        this.handleCurrentChange(1)
-        // console.log(this.showControl)
+    computed: {
+        initData (ary) {
+            this.totalData = this.tableData
+        }
     },
+    created () {
+        setTimeout(() => {
+            this.initData
+            this.handleCurrentChange(1)
+        }, 1000)
+    },
+    mounted () {
+
+    }
 }
 </script>
 <style lang="stylus" scoped>

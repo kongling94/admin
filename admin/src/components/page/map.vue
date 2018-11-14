@@ -30,7 +30,7 @@ export default {
         }
 
         return {
-            map: {
+            polar: {
                 title: {
                     text: '极坐标双数值轴'
                 },

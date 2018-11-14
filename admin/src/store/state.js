@@ -1,6 +1,7 @@
 const state = {
-    uesr: '',
+    username: '',
     token: '',
+    deviceType: '',
     type: ''
 };
 export default state;

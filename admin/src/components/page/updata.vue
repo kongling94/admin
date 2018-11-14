@@ -16,6 +16,7 @@
         </el-row>
         <div class="userinfo-list">
             <tablelist :tableHeader="tableHeader"
+                       :tableData="tableData"
                        :showControl=true></tablelist>
         </div>
         <el-dialog title="添加应用"
@@ -92,29 +93,30 @@ export default {
             tableHeader: [
                 {
                     label: 'UID',
-                    prop: 'uid'
+                    prop: 'id'
                 },
                 {
                     label: 'APP名',
-                    prop: 'appName'
+                    prop: 'name'
                 },
                 {
                     label: '当前版本',
-                    prop: 'currentVersion'
+                    prop: 'appversion[0].version_name'
                 },
                 {
                     label: '发布时间',
-                    prop: 'releaseTime'
+                    prop: 'create_time'
                 },
                 {
                     label: '最近更新',
-                    prop: 'recentUpdates'
+                    prop: 'appversion[0].create_time'
                 },
                 {
                     label: '下载量',
-                    prop: 'downloads'
+                    prop: 'appversion[0].count'
                 },
             ],
+            tableData: [],
             formRules: {
                 name: [
                     { required: true, message: '请输入名称', trigger: 'blur' },
@@ -137,10 +139,15 @@ export default {
         }
     },
     methods: {
+        _getData () {
+            this.$post("/admin/app").then(res => {
+                if (res.code === 1) {
+                    this.tableData = res.data.list
+                }
+            })
+        },
         openDialog () {
             this.showDialog = true
-            // const val = this.$refs.formFileInput.value
-            // console.log(val)
         },
         cancelDialog () {
             this.showDialog = false
@@ -150,7 +157,7 @@ export default {
         }
     },
     mounted () {
-
+        this._getData()
     },
 }
 </script>
@@ -173,7 +180,7 @@ border none */
     float left
     .el-upload-list__item:first-child
         // height 100%
-        height 32px
+        // height 32px
         margin-top 5px
         &:hover
             background-color #fff
