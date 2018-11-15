@@ -62,7 +62,9 @@ class AppversionController extends RestAdminBaseController
         }
 
         $file = $this->request->file('file');
-
+        if(!$file){
+            $this->error('请上传应用apk');
+        }
         $info = $file->validate([
             'ext' => 'apk'
         ]);
