@@ -14,7 +14,8 @@ use think\Request;
 class CronRun
 {
     public function run(&$dispatch){
-        $host_name = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : "*";
+        // $host_name = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : "*";
+        $host_name = "*";
         $headers = [
             "Access-Control-Allow-Origin" => $host_name,
             "Access-Control-Allow-Credentials" => 'true',
