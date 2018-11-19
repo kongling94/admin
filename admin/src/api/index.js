@@ -7,21 +7,11 @@ import qs from 'qs';
 import { Message } from 'element-ui';
 
 // 环境区分接口地址
-const root = process.env.API_ROOT;
-
-// 响应时间
-axios.defaults.timeout = 5000;
-
-// 配置cookie
-// axios.defaults.withCredentials = true
+// const root = process.env.API_ROOT;
 
 // 配置请求头
 axios.defaults.headers.post['Content-Type'] =
     'application/x-www-form-urlencoded;charset=UTF-8';
-
-// 配置接口地址
-axios.defaults.baseURL = root;
-
 function formatQuery(str) {
     let ary = str.split('&');
     let obj = {};
@@ -114,10 +104,21 @@ export function get(url, params) {
  * @param {String} url [请求的url地址]
  * @param {Object} params [请求时携带的参数]
  */
-export function post(url, params) {
+export function post(url, options) {
+    let opt = options || {};
     return new Promise((resolve, reject) => {
-        axios
-            .post(url, qs.stringify(params))
+        axios({
+            method: 'post',
+            url: url,
+            // 判断是否有自定义头部，以对参数进行序列化。不定义头部，默认对参数序列化为查询字符串。
+            data: (opt.headers ? opt.data : qs.stringify(opt.data)) || {},
+            responseType: opt.dataType || 'json',
+            // 设置默认请求头
+            headers: opt.headers || {
+                'Content-Type':
+                    'application/x-www-form-urlencoded; charset=UTF-8'
+            }
+        })
             .then(res => {
                 resolve(res.data);
             })

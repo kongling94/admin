@@ -70,9 +70,11 @@ export default {
         },
         login () {
             this.$post("/admin/public/login", {
-                username: this.ruleForm.username,
-                password: this.ruleForm.password,
-                device_type: 'web'
+                data: {
+                    username: this.ruleForm.username,
+                    password: this.ruleForm.password,
+                    device_type: 'web'
+                }
             }).then((res) => {
                 if (res.code === 1) {
                     this.$message({

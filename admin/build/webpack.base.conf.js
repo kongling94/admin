@@ -27,7 +27,8 @@ module.exports = {
             vue$: 'vue/dist/vue.esm.js',
             '@': resolve('src'),
             static: path.resolve(__dirname, '../static'),
-            api: resolve('src/api')
+            api: resolve('src/api'),
+            node_modules: resolve('node_modules')
         }
     },
     module: {
@@ -40,12 +41,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                include: [
-                    resolve('src'),
-                    resolve('test'),
-                    resolve('node_modules/vue-echarts'),
-                    resolve('node_modules/resize-detector')
-                ]
+                include: [resolve('src'), resolve('test')]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

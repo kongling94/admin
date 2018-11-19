@@ -77,7 +77,7 @@ export default {
             })
         },
         handleUpdata (row) {
-            alert("这边逻辑是啥？")
+            this.$emit('updataDialog', row)
         },
         styleHeaderBg ({ row, rowIndex }) {
             return "background-color:#e7eff5;font-size:14px;font-weight:normal;color:#959595;"

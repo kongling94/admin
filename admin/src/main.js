@@ -6,17 +6,28 @@ import store from './store';
 import VueClipboard from 'vue-clipboard2';
 import ElementUI from 'element-ui';
 import { post, get } from './api';
-import ECharts from 'vue-echarts/components/ECharts.vue';
+import echarts from 'echarts';
+
 import 'element-ui/lib/theme-chalk/index.css'; // 默认主题
 // import '../static/css/theme-green/index.css';       // 浅绿色主题
 import '../static/css/icon.css';
 import 'babel-polyfill';
+const root = process.env.API_ROOT;
+// 响应时间
+axios.defaults.timeout = 5000;
+
+// 配置cookie
+// axios.defaults.withCredentials = true
+
+// 配置接口地址
+axios.defaults.baseURL = '/api';
 
 Vue.use(ElementUI, { size: 'small' });
 Vue.use(VueClipboard);
 
 Vue.prototype.$post = post;
 Vue.prototype.$get = get;
+Vue.prototype.$echarts = echarts;
 
 //使用钩子函数对路由进行权限跳转
 router.beforeEach((to, from, next) => {
