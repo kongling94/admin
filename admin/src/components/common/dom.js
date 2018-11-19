@@ -4,7 +4,7 @@ export default class Newapp {
         this.fileList = [
             {
                 url: obj.appversion[0].file,
-                name: obj.name
+                name: obj.appversion[0].file
             }
         ];
         this.app_id = obj.appversion[0].app_id;

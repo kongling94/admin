@@ -33,7 +33,7 @@ export default new Router({
                         require(['../components/page/Dashboard.vue'], resolve),
                     meta: { title: '系统首页' }
                 },
-                {
+                /*  {
                     path: '/icon',
                     component: resolve =>
                         require(['../components/page/Icon.vue'], resolve),
@@ -45,7 +45,7 @@ export default new Router({
                         require(['../components/page/BaseTable.vue'], resolve),
                     meta: { title: '基础表格' }
                 },
-                {
+                  {
                     path: '/tabs',
                     component: resolve =>
                         require(['../components/page/Tabs.vue'], resolve),
@@ -91,7 +91,7 @@ export default new Router({
                     component: resolve =>
                         require(['../components/page/DragList.vue'], resolve),
                     meta: { title: '拖拽列表' }
-                },
+                },*/
                 {
                     // 权限页面
                     path: '/permission',

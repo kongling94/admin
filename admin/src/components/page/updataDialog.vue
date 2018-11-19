@@ -16,6 +16,7 @@
                 <el-form-item label="应用名"
                               prop="name">
                     <el-input v-model="addFormData.name"
+                              :disabled='isUpdata'
                               placeholder="请输入名称"></el-input>
                 </el-form-item>
                 <el-form-item label="版本号"
@@ -36,6 +37,7 @@
                                :limit="1"
                                :auto-upload="false"
                                :file-list="addFormData.fileList"
+                               :on-exceed='maxFile'
                                class="uploadFile">
                         <el-button size="small"
                                    type="primary">点击上传</el-button>
@@ -119,11 +121,14 @@ export default {
         //         }
         //     })
         // },
+        maxFile (files, fileList) {
+            console.log(files)
+            console.log(fileList)
+        },
         openDialog () {
-
             if (this.isUpdata && this.dialogData) {
                 this.addFormData = new Newapp(this.dialogData)
-                console.log(new Newapp(this.dialogData))
+                // console.log(new Newapp(this.dialogData))
             } else {
                 return this.addFormData = {
                     name: '',
@@ -138,10 +143,12 @@ export default {
         beforeUpload (file) {
             let fd = new FormData()
             fd.append('file', file)
+            fd.append('app_id', this.addFormData.app_id)
             fd.append('name', this.addFormData.name)
             fd.append('version_name', this.addFormData.version_name)
             fd.append('content', this.addFormData.content)
-            this.$post('/admin/appversion/add', {
+            const url = this.isUpdata ? 'admin/appversion/update' : '/admin/appversion/add'
+            this.$post(url, {
                 data: fd,
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -155,8 +162,12 @@ export default {
                     })
                     this.$emit('isUploaded')
                 }
+            }).catch(err => {
+                Message({
+                    type: 'error',
+                    message: err.msg
+                })
             })
-            return true
         },
         cancelDialog () {
             this.addFormData = {

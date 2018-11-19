@@ -142,7 +142,7 @@ class AppversionController extends RestAdminBaseController
         $file = $this->request->file('file');
 
         $info = $file->validate([
-            'ext' => 'apk'
+            'ext' => 'apk,jpg'
         ]);
 
         $info = $info->move(ROOT_PATH . 'public' . DS . 'upload');

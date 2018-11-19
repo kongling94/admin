@@ -18,7 +18,8 @@
             <tablelist :tableHeader="tableHeader"
                        :tableData="tableData"
                        :showControl=true
-                       @updataDialog="updataDialog"></tablelist>
+                       @updataDialog="updataDialog"
+                       ref="tableList"></tablelist>
         </div>
         <updataDialog :showDialog="showDialog"
                       :isUpdata="isUpdata"

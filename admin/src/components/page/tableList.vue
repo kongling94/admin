@@ -94,21 +94,23 @@ export default {
             let minPage = curPage < 1 ? 1 : curPage;
             curPage = curPage > maxPage ? maxPage : curPage
             return this.currentPageData = total.slice((curPage - 1) * this.pageSize, curPage * this.pageSize)
+        },
+        initData (ary) {
+            this.totalData = ary
         }
     },
     watch: {
         currentPageData (newVal) {
             this.currentPageData = newVal
-        }
-    },
-    computed: {
-        initData (ary) {
-            this.totalData = this.tableData
+        },
+        tableData (newVal) {
+            this.initData(newVal)
+            this.handleCurrentChange(1)
         }
     },
     created () {
         setTimeout(() => {
-            this.initData
+            this.initData(this.tableData)
             this.handleCurrentChange(1)
         }, 1000)
     },
