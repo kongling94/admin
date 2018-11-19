@@ -1,23 +1,20 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkCMF [ WE CAN DO IT MORE SIMPLE ]
+// | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013-2017 http://www.thinkcmf.com All rights reserved.
+// | Copyright (c) 2006~2018 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
-// | Author: Dean <zxxjjforever@163.com>
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
 // 应用行为扩展定义文件
 return [
     // 应用初始化
-    'app_init'     => [
-        'cmf\\behavior\\InitHookBehavior',
-    ],
+    'app_init'     => [],
     // 应用开始
-    'app_begin'    => [
-        'cmf\\behavior\\LangBehavior',
-        // 'cmf\\behavior\\CronRun',
-    ],
+    'app_begin'    => [],
     // 模块初始化
     'module_init'  => [],
     // 操作开始执行

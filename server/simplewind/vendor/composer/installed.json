@@ -365,7 +365,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/a85f7fe9fe08d093a4a8583cdd306b553ff918aa",
+            "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/8f543ede60386faec9b0012833536de4b6083bb9",
             "reference": "a85f7fe9fe08d093a4a8583cdd306b553ff918aa",
             "shasum": ""
         },
@@ -785,5 +785,44 @@
             }
         ],
         "description": "The ThinkPHP5 Queue Package"
+    },
+    {
+        "name": "topthink/think-swoole",
+        "version": "v2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/top-think/think-swoole.git",
+            "reference": "501a2f104ac39db82414f79749adc8f032273613"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/top-think/think-swoole/zipball/501a2f104ac39db82414f79749adc8f032273613",
+            "reference": "501a2f104ac39db82414f79749adc8f032273613",
+            "shasum": ""
+        },
+        "require": {
+            "ext-swoole": ">=1.8"
+        },
+        "time": "2018-06-22 08:21:06",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "think\\swoole\\": "src"
+            },
+            "files": []
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "liu21st",
+                "email": "liu21st@gmail.com"
+            }
+        ],
+        "description": "Swoole extend for thinkphp5"
     }
 ]
