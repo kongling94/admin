@@ -14,32 +14,33 @@ namespace api\device\model;
 
 use think\Model;
 use api\common\model\CommonModel;
-class DeviceModel extends CommonModel
+
+class AppVersionModel extends CommonModel
 {
     // protected $type = [
     //     'more' => 'array',
     // ];
 
-    // 开启自动写入时间戳字段
-    protected $autoWriteTimestamp = true;
+    // // 开启自动写入时间戳字段
+    // protected $autoWriteTimestamp = true;
     
-    // public function appversion(){
-    //     return $this->belongsTo('AppVersionModel', 'id', 'id');
+    // public function AppVersion(){
+    //     return $this->belongsTo('AppVersion', 'app_name', 'id');
     // }
 
-    /**
-     * avatar 自动转化
-     * @param $value
-     * @return string
-     */
-    public function getCreateTimeAttr($value)
-    {
-        // return cmf_get_user_avatar_url($value);
-        if($value){
-            $value = date('Y-m-d H:i:s', $value);
-        }
-        return $value;
-    }
+    // /**
+    //  * avatar 自动转化
+    //  * @param $value
+    //  * @return string
+    //  */
+    // public function getCreateTimeAttr($value)
+    // {
+    //     // return cmf_get_user_avatar_url($value);
+    //     if($value){
+    //         $value = date('Y-m-d H:i:s', $value);
+    //     }
+    //     return $value;
+    // }
 
 
 }
