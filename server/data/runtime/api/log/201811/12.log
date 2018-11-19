@@ -819,6 +819,13 @@
 [ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'mobile' LIMIT 1 [ RunTime:0.002000s ]
 [ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='7f04825dc4b54f409aa581ab33c1641c7f04825dc4b54f409aa581ab33c1641c',`expire_time`=1557556114,`create_time`=1542004114  WHERE  `user_id` = 1  AND `device_type` = 'mobile' [ RunTime:0.831048s ]
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2018-11-12T17:03:17+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin
+[ info ] 168.168.100.16/app_manage/server/public/api/admin [运行时间：0.498000s][吞吐率：2.01req/s] [内存消耗：1,915.87kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.045000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
 [ 2018-11-12T14:51:41+08:00 ] 127.0.0.1 POST /server/public/api/admin/public/logout
 [ info ] appmanage.net/server/public/api/admin/public/logout [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,559.55kb] [文件加载：51]
 [ info ] [ CACHE ] INIT File
@@ -1409,11 +1416,39 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005001s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '51fac904-1790-4aa8-906e-9ee6cd03a96e',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'accept' => '*/*',
+  'host' => '168.168.100.16',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.014000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T17:03:32+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin?username=admin&password=admin
+[ info ] 168.168.100.16/app_manage/server/public/api/admin?username=admin&password=admin [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：1,916.59kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'add',
   ),
@@ -1444,11 +1479,41 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006001s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '1f611d9e-ab27-4d62-90e6-88194d4ab965',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'accept' => '*/*',
+  'host' => '168.168.100.16',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T17:03:45+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/login?username=admin&password=admin
+[ info ] 168.168.100.16/app_manage/server/public/api/login?username=admin&password=admin [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：1,910.38kb] [文件加载：56]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'add',
   ),
@@ -1514,10 +1579,41 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e0178bec-f5e4-4a20-bf65-5eca3f48c873',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'accept' => '*/*',
+  'host' => '168.168.100.16',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T17:03:53+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/login?username=admin&password=admin
+[ info ] 168.168.100.16/app_manage/server/public/api/login?username=admin&password=admin [运行时间：0.059000s][吞吐率：16.95req/s] [内存消耗：1,910.38kb] [文件加载：56]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     0 => 'admin',
     1 => 'appversion',
     2 => 'add',
@@ -1588,10 +1684,41 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '5e24005a-29af-476a-a9c5-1d5fed955e20',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'accept' => '*/*',
+  'host' => '168.168.100.16',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T17:04:04+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/login
+[ info ] 168.168.100.16/app_manage/server/public/api/login [运行时间：0.074000s][吞吐率：13.51req/s] [内存消耗：1,892.12kb] [文件加载：54]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.011000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     0 => 'admin',
     1 => 'appversion',
     2 => 'add',
@@ -1627,10 +1754,43 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://168.168.100.16:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://168.168.100.16:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-12T17:06:58+08:00 ] 168.168.100.16 GET /app_manage/server/public/api/admin/public/login?username=admin&password=admin
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login?username=admin&password=admin [运行时间：0.136000s][吞吐率：7.35req/s] [内存消耗：2,692.30kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     0 => 'admin',
     1 => 'appversion',
     2 => 'add',
@@ -1666,11 +1826,45 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005001s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'cd773693-14f8-4ba7-9e1c-58297545ad8b',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'accept' => '*/*',
+  'host' => '168.168.100.16',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:07:11+08:00 ] 168.168.100.16 GET /app_manage/server/public/api/admin/public/login?username=admin&password=123456
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login?username=admin&password=123456 [运行时间：0.082000s][吞吐率：12.20req/s] [内存消耗：2,692.27kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'add',
   ),
@@ -1705,11 +1899,45 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003001s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '40d115e4-ac17-4b1c-9fa5-af3c3a7e7add',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'accept' => '*/*',
+  'host' => '168.168.100.16',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.005000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:07:51+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login?username=admin&password=123456
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login?username=admin&password=123456 [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：2,691.54kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'add',
   ),
@@ -1744,11 +1972,46 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '7cea5544-1496-422d-ae36-ba4090833cb0',
+  'user-agent' => 'PostmanRuntime/7.4.0',
+  'accept' => '*/*',
+  'host' => '168.168.100.16',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:12:55+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.087000s][吞吐率：11.49req/s] [内存消耗：2,692.52kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.011000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'index',
   ),
@@ -1780,11 +2043,48 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006001s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://168.168.100.16:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://168.168.100.16:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.004000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:12:55+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.064000s][吞吐率：15.63req/s] [内存消耗：2,692.52kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'index',
   ),
@@ -1816,11 +2116,48 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006001s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://168.168.100.16:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://168.168.100.16:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:12:55+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.070000s][吞吐率：14.29req/s] [内存消耗：2,692.52kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'index',
   ),
@@ -1851,11 +2188,48 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://168.168.100.16:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://168.168.100.16:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:12:55+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.065000s][吞吐率：15.38req/s] [内存消耗：2,692.62kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'edit',
   ),
@@ -1914,11 +2288,48 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://168.168.100.16:8080/admin/public/login',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://168.168.100.16:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.003000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:12:58+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.071000s][吞吐率：14.08req/s] [内存消耗：2,692.52kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'del',
   ),
@@ -1947,11 +2358,48 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://168.168.100.16:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://168.168.100.16:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:13:58+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.056000s][吞吐率：17.86req/s] [内存消耗：2,692.73kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'del',
   ),
@@ -2018,11 +2466,49 @@
 [ info ] [ DB ] INIT mysql
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.123007s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:28:56+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.083000s][吞吐率：12.05req/s] [内存消耗：2,692.73kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'add',
   ),
@@ -2057,11 +2543,49 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.003000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '41',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.002000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:28:58+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：2,692.73kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.006000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'add',
   ),
@@ -2096,11 +2620,49 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.004001s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '41',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-11-12T17:29:53+08:00 ] 168.168.100.16 POST /app_manage/server/public/api/admin/public/login
+[ info ] 168.168.100.16/app_manage/server/public/api/admin/public/login [运行时间：0.450000s][吞吐率：2.22req/s] [内存消耗：2,692.61kb] [文件加载：60]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+=======
     1 => 'appversion',
     2 => 'add',
   ),
@@ -2135,11 +2697,47 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.005000s ]
 [ info ] [ LANG ] D:\WWW\PHPTutorial\WWW\app_manage\server\simplewind\thinkphp\lang\zh-cn.php
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '_ga=GA1.1.1018840024.1533210445',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/',
+  'content-type' => 'application/json;charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '61',
+  'connection' => 'close',
+  'host' => '168.168.100.16',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'a123456',
+  'device_type' => 'web',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\app_manage\server\public\api/../../simplewind/cmf/lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.001000s ]
+[ info ] [ RUN ] api\admin\controller\PublicController->login[ D:\phpStudy\WWW\app_manage\server\api\admin\controller\PublicController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=168.168.0.253;port=3306;dbname=app_manage;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user` WHERE  `user_login` = 'admin' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `am_user_token` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `am_user_token` WHERE  `user_id` = 1  AND `device_type` = 'web' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `am_user_token`  SET `token`='aba1e4e3d526c5482740330c0f62b2a9aba1e4e3d526c5482740330c0f62b2a9',`expire_time`=1557566992,`create_time`=1542014992  WHERE  `user_id` = 1  AND `device_type` = 'web' [ RunTime:0.385000s ]
+=======
     1 => 'appversion',
     2 => 'add',
   ),
@@ -2170,3 +2768,4 @@
 [ sql ] [ SQL ] INSERT INTO `am_app` (`name` , `create_time` , `update_time`) VALUES ('MediaStation' , 1542017002 , 1542017002) [ RunTime:0.002000s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `am_app_version` [ RunTime:0.002000s ]
 [ sql ] [ SQL ] INSERT INTO `am_app_version` (`app_id` , `version_name` , `create_time` , `update_time` , `content` , `file`) VALUES (1 , 'v1.0.3' , 1542017002 , 1542017002 , '1234' , '20181112\\66c8a2074f34ea782aa5108ec97728ba.jpg') [ RunTime:0.010001s ]
+>>>>>>> 3ef09642acba2706ef6d41d682bdba6f2625b933
