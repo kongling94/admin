@@ -7,7 +7,7 @@ import qs from 'qs';
 import { Message } from 'element-ui';
 
 // 环境区分接口地址
-// const root = process.env.API_ROOT;
+const root = process.env.API_ROOT;
 
 // 配置请求头
 axios.defaults.headers.post['Content-Type'] =
