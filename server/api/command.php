@@ -22,4 +22,5 @@ foreach ($apps as $app) {
 
 }
 
+
 return $returnCommands;
