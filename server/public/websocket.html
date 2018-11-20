@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+// 初始化一个 WebSocket 对象
+var ws = new WebSocket("ws://127.0.0.1:9501");
+
+// 建立 web socket 连接成功触发事件
+ws.onopen = function () {
+  // 使用 send() 方法发送数据
+  ws.send("发送数据");
+  // alert("数据发送中...");
+};
+
+// 接收服务端数据时触发事件
+ws.onmessage = function (evt) {
+  var received_msg = evt.data;
+  // alert("数据已接收...");
+  console.log(evt);
+};
+
+// 断开 web socket 连接成功触发事件
+ws.onclose = function () {
+  alert("连接已关闭...");
+};
+
+</script>
+</html>

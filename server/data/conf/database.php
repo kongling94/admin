@@ -20,6 +20,7 @@ return [
     'charset'  => 'utf8mb4',
     // 数据库表前缀
     'prefix'   => 'am_',
-    "authcode" => 'HetpLQZwCVtyG6chEG',
+    "authcode" => 'RfXzhFWRsFzJwCPfi0',
     //#COOKIE_PREFIX#
+    //
 ];

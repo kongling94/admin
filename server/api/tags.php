@@ -16,6 +16,7 @@ return [
     // 应用开始
     'app_begin'    => [
         'cmf\\behavior\\LangBehavior',
+        // 'cmf\\behavior\\CronRun',
     ],
     // 模块初始化
     'module_init'  => [],
