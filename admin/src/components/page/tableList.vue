@@ -31,7 +31,7 @@
         <el-pagination background
                        class="pages"
                        layout="prev, pager, next"
-                       :page-size="10"
+                       :page-size="20"
                        @current-change="handleCurrentChange"
                        :total="totalData.length">
         </el-pagination>
@@ -57,7 +57,7 @@ export default {
     data () {
         return {
             page: 1,
-            pageSize: 10,
+            pageSize: 20,
             totalData: [],
             currentPageData: []
         }

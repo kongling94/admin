@@ -53,7 +53,7 @@ class AppModel extends Model
             $map['id'] = $app_id;
             $data = $this->with('appversion')->where($map)->field('id, create_time, name, name AS link')->find();
         }else{
-            $data = $this->with('appversion')->field('id, create_time, name, name AS link')->select();
+            $data = $this->with('appversion')->field('id, create_time, name, name AS link')->order('create_time desc')->select();
         }
         
         // dump($this->getLastSql());

@@ -32,6 +32,8 @@ class AppController extends RestUserBaseController
     {
         $params                       = $this->request->get();
         // $params['where']['post_type'] = 1;
+        // $params['page'] = 20;
+        
         $data                         = $this->postModel->getlist();
         // $data->appversion;
         // $sql_version = Db::name('app')->alias('a2')->join('__APP_VERSION__ av2', 'a2.id = av2.app_id')->field('av2.*')->order('av2.update_time desc')->limit(1)->select(false);
