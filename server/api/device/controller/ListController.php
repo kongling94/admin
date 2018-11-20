@@ -19,6 +19,7 @@ class ListController extends RestBaseController
     public function index(){
         // $findDeviceWhere['status'] = 1;
         // $list = Db::name("device")->where($findDeviceWhere)->select();
+        
 
         $param           = $this->request->param();
         $param['order'] = '-create_time';
