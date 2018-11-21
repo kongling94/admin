@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0339b73d56e766b16d82e262e10f4f1d",
-    "content-hash": "a40326d848061ca471785c03b14a64ee",
+    "hash": "d401b130d2e01e028b5dd2cb357ea66b",
+    "content-hash": "89583a21f0972679aa4d830ed312f518",
     "packages": [
         {
             "name": "dompdf/dompdf",
@@ -253,7 +253,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/a85f7fe9fe08d093a4a8583cdd306b553ff918aa",
+                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/8f543ede60386faec9b0012833536de4b6083bb9",
                 "reference": "a85f7fe9fe08d093a4a8583cdd306b553ff918aa",
                 "shasum": ""
             },
@@ -761,6 +761,43 @@
             ],
             "description": "The ThinkPHP5 Queue Package",
             "time": "2018-05-04 05:29:53"
+        },
+        {
+            "name": "topthink/think-swoole",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-swoole.git",
+                "reference": "501a2f104ac39db82414f79749adc8f032273613"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/top-think/think-swoole/zipball/501a2f104ac39db82414f79749adc8f032273613",
+                "reference": "501a2f104ac39db82414f79749adc8f032273613",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": ">=1.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "think\\swoole\\": "src"
+                },
+                "files": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "liu21st",
+                    "email": "liu21st@gmail.com"
+                }
+            ],
+            "description": "Swoole extend for thinkphp5",
+            "time": "2018-06-22 08:21:06"
         }
     ],
     "packages-dev": [],

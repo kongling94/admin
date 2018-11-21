@@ -7,7 +7,7 @@ import qs from 'qs';
 import { Message } from 'element-ui';
 
 // 环境区分接口地址
-// const root = process.env.API_ROOT;
+const root = process.env.API_ROOT;
 
 // 配置请求头
 axios.defaults.headers.post['Content-Type'] =
@@ -87,7 +87,8 @@ axios.interceptors.response.use(
 export function get(url, params) {
     return new Promise((resolve, reject) => {
         axios
-            .get(url, {
+            .get(
+                root + url, {
                 params: params
             })
             .then(res => {
@@ -109,7 +110,7 @@ export function post(url, options) {
     return new Promise((resolve, reject) => {
         axios({
             method: 'post',
-            url: url,
+            url: root + url,
             // 判断是否有自定义头部，以对参数进行序列化。不定义头部，默认对参数序列化为查询字符串。
             data: (opt.headers ? opt.data : qs.stringify(opt.data)) || {},
             responseType: opt.dataType || 'json',

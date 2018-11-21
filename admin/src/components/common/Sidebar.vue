@@ -51,7 +51,13 @@ export default {
     data () {
         return {
             collapse: false,
-            items: [{
+            items: [
+            {
+                icon: 'el-icon-lx-home',
+                index: 'dashboard',
+                title: '系统首页'
+            },
+                {
                 icon: 'el-icon-lx-info',
                 index: 'userinfo',
                 title: '用户概况'
@@ -61,11 +67,7 @@ export default {
                 index: 'updata',
                 title: '版本更新'
             },
-            {
-                icon: 'el-icon-lx-home',
-                index: 'dashboard',
-                title: '系统首页'
-            },
+            
             /* {
                  icon: 'el-icon-lx-cascades',
                  index: 'table',
@@ -120,21 +122,21 @@ export default {
                  index: 'drag',
                  title: '拖拽列表'
              },*/
-            {
-                icon: 'el-icon-lx-warn',
-                index: '6',
-                title: '错误处理',
-                subs: [
-                    {
-                        index: 'permission',
-                        title: '权限测试'
-                    },
-                    {
-                        index: '404',
-                        title: '404页面'
-                    }
-                ]
-            }
+            // {
+            //     icon: 'el-icon-lx-warn',
+            //     index: '6',
+            //     title: '错误处理',
+            //     subs: [
+            //         {
+            //             index: 'permission',
+            //             title: '权限测试'
+            //         },
+            //         {
+            //             index: '404',
+            //             title: '404页面'
+            //         }
+            //     ]
+            // }
             ]
         }
     },
