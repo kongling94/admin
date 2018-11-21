@@ -141,6 +141,10 @@ class AppversionController extends RestAdminBaseController
 
         $file = $this->request->file('file');
 
+        if(!$file){
+            $this->error('请上传应用apk');
+        }
+
         $info = $file->validate([
             'ext' => 'apk,jpg'
         ]);
@@ -163,8 +167,17 @@ class AppversionController extends RestAdminBaseController
 
             $appModel = new AppModel();
             $result = $appModel->getlist($data['app_id']);
+            $json_data['name'] = $result['name'];
+            // $json_data['link'] = $result['link'];
+            foreach ($result['appversion'] as $key => $value) {
+                $json_data['appversion'][$key]['version_name'] = $value['version_name'];
+                $json_data['appversion'][$key]['file'] = $value['file'];
+                $json_data['appversion'][$key]['content'] = $value['content'];
+                $json_data['appversion'][$key]['create_time'] = $value['create_time'];
+                
+            }
             
-            file_put_contents(ROOT_PATH . 'public/conf/' .$data['name'].'.json', json_encode($result));
+            file_put_contents(ROOT_PATH . 'public/conf/' .$result['name'].'.json', json_encode($json_data));
 
             $this->success('更新成功', ['list'=>$result]);
         } else {
