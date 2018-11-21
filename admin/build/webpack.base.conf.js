@@ -28,7 +28,10 @@ module.exports = {
             '@': resolve('src'),
             static: path.resolve(__dirname, '../static'),
             api: resolve('src/api'),
-            node_modules: resolve('node_modules')
+            node_modules: resolve('node_modules'),
+            common: resolve('src/components/common'),
+            images: resolve('src/assets/images'),
+            js: resolve('src/assets/js')
         }
     },
     module: {

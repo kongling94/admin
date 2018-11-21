@@ -28,17 +28,25 @@
                 </template>
             </el-table-column>
         </el-table>
-        <el-pagination background
-                       class="pages"
-                       layout="prev, pager, next"
-                       :page-size="20"
-                       @current-change="handleCurrentChange"
-                       :total="totalData.length">
-        </el-pagination>
+        <el-row class="tableList_footer">
+            <el-button type="primary"
+                       icon="el-icon-lx-refresh"
+                       class="refreshBtn"
+                       @click="refreshTable"></el-button>
+            <el-pagination background
+                           class="pages"
+                           layout="prev, pager, next"
+                           :page-size="20"
+                           :current-page.sync="page"
+                           @current-change="handleCurrentChange"
+                           :total="totalData.length">
+            </el-pagination>
+        </el-row>
     </div>
 </template>
 <script>
 import { Message } from 'element-ui'
+
 export default {
     name: 'tableList',
     props: {
@@ -63,6 +71,11 @@ export default {
         }
     },
     methods: {
+        refreshTable () {
+            this.$emit('isUploaded')
+            this.handleCurrentChange(1)
+            this.page = 1
+        },
         copyAddress (index, row) {
             this.$copyText(row.link).then((res) => {
                 Message({
@@ -93,6 +106,7 @@ export default {
             let maxPage = Math.floor(total / this.pageSize);
             let minPage = curPage < 1 ? 1 : curPage;
             curPage = curPage > maxPage ? maxPage : curPage
+            this.page = curPage
             return this.currentPageData = total.slice((curPage - 1) * this.pageSize, curPage * this.pageSize)
         },
         initData (ary) {
@@ -110,7 +124,7 @@ export default {
     },
     created () {
         setTimeout(() => {
-            this.initData(this.tableData)
+            // this.initData(this.tableData)
             this.handleCurrentChange(1)
         }, 1000)
     },
@@ -123,7 +137,14 @@ export default {
 .tableList
     padding 0 20px
     font-size 18px
-    .pages
-        margin-top 25px
+    .tableList_footer
         text-align right
+        margin-top 25px
+        .refreshBtn
+            vertical-align bottom
+            height 32px
+            font-size 14px
+        .pages
+            display inline-block
+            // padding-left 50px
 </style>

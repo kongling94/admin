@@ -9,14 +9,14 @@
                      class="ms-content">
                 <el-form-item prop="username">
                     <el-input v-model="ruleForm.username"
-                              placeholder="username">
+                              placeholder="用户名">
                         <el-button slot="prepend"
                                    icon="el-icon-lx-people"></el-button>
                     </el-input>
                 </el-form-item>
                 <el-form-item prop="password">
                     <el-input type="password"
-                              placeholder="password"
+                              placeholder="密码"
                               v-model="ruleForm.password"
                               @keyup.enter.native="login('ruleForm')">
                         <el-button slot="prepend"
@@ -27,7 +27,7 @@
                     <el-button type="primary"
                                @click="login('ruleForm')">登录</el-button>
                 </div>
-                <p class="login-tips">Tips : 用户名和密码随便填。</p>
+                <p class="login-tips"></p>
             </el-form>
         </div>
     </div>
@@ -86,6 +86,11 @@ export default {
                     this.setLoginInfo(data)
                     // localStorage.setItem('username', this.ruleForm.username);
                     this.$router.push('/');
+                } else if (res.code === 0) {
+                    this.$message({
+                        message: res.msg,
+                        type: 'error'
+                    });
                 }
             })
         }
@@ -101,7 +106,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(../../assets/login-bg.jpg);
+  background-image: url(../../../assets/images/login-bg.jpg);
   background-size: 100%;
 }
 .ms-title {

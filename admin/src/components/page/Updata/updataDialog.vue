@@ -2,7 +2,7 @@
     <div class="dialog">
         <el-dialog :title="isUpdata?'更新版本':'添加应用'"
                    :visible.sync="showDialog"
-                   width="32%"
+                   width="600px"
                    :rules="formRules"
                    :before-close="cancelDialog"
                    center
@@ -61,7 +61,7 @@
     </div>
 </template>
 <script>
-import Newapp from '../common/dom.js'
+import Newapp from 'js/dom.js'
 import { Message } from 'element-ui'
 export default {
     name: 'updataDialog',
@@ -122,13 +122,11 @@ export default {
         //     })
         // },
         maxFile (files, fileList) {
-            console.log(files)
-            console.log(fileList)
+
         },
         openDialog () {
             if (this.isUpdata && this.dialogData) {
                 this.addFormData = new Newapp(this.dialogData)
-                // console.log(new Newapp(this.dialogData))
             } else {
                 return this.addFormData = {
                     name: '',
@@ -147,7 +145,7 @@ export default {
             fd.append('name', this.addFormData.name)
             fd.append('version_name', this.addFormData.version_name)
             fd.append('content', this.addFormData.content)
-            const url = this.isUpdata ? 'admin/appversion/update' : '/admin/appversion/add'
+            const url = this.isUpdata ? '/admin/appversion/update' : '/admin/appversion/add'
             this.$post(url, {
                 data: fd,
                 headers: {
@@ -161,12 +159,20 @@ export default {
                         message: res.msg
                     })
                     this.$emit('isUploaded')
+                } else if (res.code === 0) {
+                    this.$message({
+                        message: res.msg,
+                        type: 'error'
+                    });
+                } else if (res.code === 10001) {
+                    this.$message({
+                        message: res.msg,
+                        type: 'error'
+                    });
                 }
+
             }).catch(err => {
-                Message({
-                    type: 'error',
-                    message: err.msg
-                })
+                // console.log(err)
             })
         },
         cancelDialog () {
@@ -182,7 +188,7 @@ export default {
 
     },
     created () {
-        // console.log(this.dialogData)
+
     },
     mounted () {
 
@@ -194,7 +200,7 @@ export default {
     width 80px
     height 32px
     border none
-    float right
+    margin-left 8px
 .uploadFile >>> .el-upload-list
     width 312px
     height 32px

@@ -1,44 +1,44 @@
 {
-  "code": 1,
-  "msg": "请求成功!",
-  "data": {
-    "list": [
-      {
-        "id": 4,
-        "name": "MediaStation",
-        "appversion": [
-          {
-            "id": 7,
-            "app_id": 4,
-            "version_name": "1.1",
-            "create_time": "2018-11-13 11:48:47",
-            "content": "更新说明",
-            "file": "http://168.168.4.20/app_manage/server/public/upload/20181113/b99e975e5c2ce3d5cdf437659f835391.apk"
-          },
-          {
-            "id": 6,
-            "app_id": 4,
-            "version_name": "1.0",
-            "create_time": "2018-11-13 11:39:49",
-            "content": "更新说明",
-            "file": "http://168.168.4.20/app_manage/server/public/upload/20181113/40fc3d7aaf30d6eb67a364603fe61a80.apk"
-          }
+    "code": 1,
+    "msg": "请求成功!",
+    "data": {
+        "list": [
+            {
+                "id": 4,
+                "name": "MediaStation",
+                "appversion": [
+                    {
+                        "id": 7,
+                        "app_id": 4,
+                        "version_name": "1.1",
+                        "create_time": "2018-11-13 11:48:47",
+                        "content": "更新说明",
+                        "file": "http://168.168.100.16/app_manage/server/public/upload/20181113/b99e975e5c2ce3d5cdf437659f835391.apk"
+                    },
+                    {
+                        "id": 6,
+                        "app_id": 4,
+                        "version_name": "1.0",
+                        "create_time": "2018-11-13 11:39:49",
+                        "content": "更新说明",
+                        "file": "http://168.168.100.16/app_manage/server/public/upload/20181113/40fc3d7aaf30d6eb67a364603fe61a80.apk"
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "name": "MediaStation2",
+                "appversion": [
+                    {
+                        "id": 8,
+                        "app_id": 5,
+                        "version_name": "0.1",
+                        "create_time": "2018-11-13 16:02:18",
+                        "content": "更新说明",
+                        "file": "http://168.168.100.16/app_manage/server/public/upload/20181113/2a325d21a6913abf14bb7e65c6cd57ec.apk"
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "id": 5,
-        "name": "MediaStation2",
-        "appversion": [
-          {
-            "id": 8,
-            "app_id": 5,
-            "version_name": "0.1",
-            "create_time": "2018-11-13 16:02:18",
-            "content": "更新说明",
-            "file": "http://168.168.4.20/app_manage/server/public/upload/20181113/2a325d21a6913abf14bb7e65c6cd57ec.apk"
-          }
-        ]
-      }
-    ]
-  }
+    }
 }
