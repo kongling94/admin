@@ -67,13 +67,13 @@ export default {
                     index: 'updata',
                     title: '版本更新'
                 },
-                {
+                /*{
                     icon: 'el-icon-lx-emoji',
                     index: 'icon',
                     title: '自定义图标'
                 },
 
-                /* {
+                 {
                      icon: 'el-icon-lx-cascades',
                      index: 'table',
                      title: '基础表格'
