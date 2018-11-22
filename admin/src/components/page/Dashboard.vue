@@ -2,7 +2,7 @@
     <div>
         <el-row :gutter="20">
 
-            <el-col :span="24">
+            <el-col :span="16">
                 <el-row :gutter="20"
                         class="mgb20">
                     <el-col :span="8">
@@ -43,7 +43,7 @@
                     </el-col>
                 </el-row>
                 <el-card shadow="hover"
-                         style="height:403px;">
+                         style="height:450px;">
                     <div slot="header"
                          class="clearfix">
                         <span>操作记录</span>
@@ -51,8 +51,10 @@
                                    type="text">添加</el-button> -->
                     </div>
                     <el-table :data="todoList"
-                              height="304"
-                              style="width: 100%;font-size:14px;">
+                              height="450"
+                              :header-cell-style="{'text-align':'center'}"
+                              :cell-style="{'text-align':'center'}"
+                              style="width: 100%;font-size:14px;overflow-y:scroll">
                         <!-- todolist状态修改 -->
                         <!-- <el-table-column width="40">
                             <template slot-scope="scope">
@@ -65,12 +67,7 @@
                                          :prop="item.prop"
                                          :label="item.label">
                         </el-table-column>
-                        <el-table-column>
-                            <template slot-scope="scope">
-                                <div class="todo-item"
-                                     :class="{'todo-item-del': scope.row.status}">{{scope.row.title}}</div>
-                            </template>
-                        </el-table-column>
+
                         <!-- <el-table-column width="60">
                             <template slot-scope="scope">
                                 <i class="el-icon-edit"></i>
@@ -80,7 +77,7 @@
                     </el-table>
                 </el-card>
             </el-col>
-            <!-- <el-col :span="8">
+            <el-col :span="8">
                 <el-card shadow="hover"
                          class="mgb20"
                          style="height:100%">
@@ -96,7 +93,7 @@
                     <div class="user-info-list">上次登录时间：<span>2018-01-01</span></div>
                     <div class="user-info-list">上次登录地点：<span></span></div>
                 </el-card>
-                <el-card shadow="hover"
+                <!-- <el-card shadow="hover"
                          style="height:252px;">
                     <div slot="header"
                          class="clearfix">
@@ -113,8 +110,8 @@
                     HTML
                     <el-progress :percentage="0.9"
                                  color="#f56c6c"></el-progress>
-                </el-card>
-            </el-col> -->
+                </el-card> -->
+            </el-col>
         </el-row>
         <el-row :gutter="20">
             <el-col :span="12">
@@ -167,29 +164,7 @@ export default {
                     prop: 'create_time'
                 }
             ],
-            todoList: [{
-                title: '今天要修复100个bug',
-                status: false,
-            },
-            {
-                title: '今天要修复100个bug',
-                status: false,
-            },
-            {
-                title: '今天要写100行代码加几个bug吧',
-                status: false,
-            }, {
-                title: '今天要修复100个bug',
-                status: false,
-            },
-            {
-                title: '今天要修复100个bug',
-                status: false,
-            },
-            {
-                title: '今天要写100行代码加几个bug吧',
-                status: false,
-            }
+            todoList: [
             ],
             data: [{
                 name: '2018/09/04',
@@ -281,7 +256,7 @@ export default {
         },
         _getTodoList () {
             this.$post('/admin/log').then(res => {
-                console.log(res)
+                this.todoList = res.data.list
             })
         }
     },

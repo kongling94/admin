@@ -13,7 +13,7 @@ use think\Db;
 use think\Validate;
 
 use api\admin\model\AppModel;
-
+use api\admin\model\LogModel;
 class AppversionController extends RestAdminBaseController
 {
 
@@ -99,6 +99,12 @@ class AppversionController extends RestAdminBaseController
             
             file_put_contents(ROOT_PATH . 'public/conf/' .$data['name'].'.json', json_encode($result));
 
+            //记录操作
+            $logModel = new LogModel();
+            $log['user_id'] = $this->userId;
+            $log['content'] = '添加应用 ' .$data['name'];
+            $logModel->save($log);
+
             $this->success('添加成功', ['list'=>$result]);
         } else {
             $this->error($file->getError());
@@ -141,6 +147,10 @@ class AppversionController extends RestAdminBaseController
 
         $file = $this->request->file('file');
 
+        if(!$file){
+            $this->error('请上传应用apk');
+        }
+
         $info = $file->validate([
             'ext' => 'apk,jpg'
         ]);
@@ -163,8 +173,23 @@ class AppversionController extends RestAdminBaseController
 
             $appModel = new AppModel();
             $result = $appModel->getlist($data['app_id']);
-            
-            file_put_contents(ROOT_PATH . 'public/conf/' .$data['name'].'.json', json_encode($result));
+            $json_data['name'] = $result['name'];
+            // $json_data['link'] = $result['link'];
+            foreach ($result['appversion'] as $key => $value) {
+                $json_data['appversion'][$key]['version_name'] = $value['version_name'];
+                $json_data['appversion'][$key]['file'] = $value['file'];
+                $json_data['appversion'][$key]['content'] = $value['content'];
+                $json_data['appversion'][$key]['create_time'] = $value['create_time'];
+                
+            }
+
+            file_put_contents(ROOT_PATH . 'public/conf/' .$result['name'].'.json', json_encode($json_data));
+
+            //记录操作
+            $logModel = new LogModel();
+            $log['user_id'] = $this->userId;
+            $log['content'] = '更新应用 ' .$result['name'] . ' ' . $data['version_name'] . '版';
+            $logModel->save($log);
 
             $this->success('更新成功', ['list'=>$result]);
         } else {

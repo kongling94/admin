@@ -76,17 +76,16 @@ export default {
                     device_type: 'web'
                 }
             }).then((res) => {
-                if (res.code === 1) {
-                    this.$message({
-                        message: res.msg,
-                        type: 'success'
-                    });
-                    const data = res.data
-                    data.deviceType = localStorage.getItem("deviceType")
-                    this.setLoginInfo(data)
-                    // localStorage.setItem('username', this.ruleForm.username);
-                    this.$router.push('/');
-                }
+                this.$message({
+                    message: res.msg,
+                    type: 'success'
+                });
+                const data = res.data
+                data.deviceType = localStorage.getItem("deviceType")
+                this.setLoginInfo(data)
+                // localStorage.setItem('username', this.ruleForm.username);
+                this.$router.push('/');
+
             })
         }
     },

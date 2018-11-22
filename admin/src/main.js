@@ -28,7 +28,6 @@ Vue.use(VueClipboard);
 Vue.prototype.$post = post;
 Vue.prototype.$get = get;
 Vue.prototype.$echarts = echarts;
-
 //使用钩子函数对路由进行权限跳转
 /* router.beforeEach((to, from, next) => {
     const role = localStorage.getItem('username');

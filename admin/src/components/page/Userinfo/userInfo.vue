@@ -68,19 +68,7 @@ export default {
     methods: {
         _getUserData () {
             this.$post('/device/list').then(res => {
-                if (res.code === 1) {
-                    this.userList = res.data.list
-                } else if (res.code === 0) {
-                    this.$message({
-                        message: res.msg,
-                        type: 'error'
-                    });
-                } else if (res.code === 10001) {
-                    this.$message({
-                        message: res.msg,
-                        type: 'error'
-                    });
-                }
+                this.userList = res.data.list
             })
         },
         handleClick (tab, event) {

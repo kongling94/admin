@@ -1,6 +1,7 @@
 // 引入axios
 import axios from 'axios';
 import store from '../store';
+import router from '../router';
 // 序列化
 import qs from 'qs';
 // 引入element-ui 的 message组件
@@ -10,8 +11,8 @@ import { Message } from 'element-ui';
 const root = process.env.API_ROOT;
 
 // 配置请求头
-/* axios.defaults.headers.post['Content-Type'] =
-    'application/x-www-form-urlencoded;charset=UTF-8'; */
+axios.defaults.headers.post['Content-Type'] =
+    'application/x-www-form-urlencoded;charset=UTF-8';
 function formatQuery(str) {
     let ary = str.split('&');
     let obj = {};
@@ -49,12 +50,12 @@ axios.interceptors.response.use(
                 return Promise.resolve(response);
             } else if (response.data.code === 10001) {
                 tip('warning', response.data.msg);
-                toLogin();
-                store.commit('removeToken');
-                return;
+                store.commit('REMOVE_TOKEN');
+                setTimeout(() => {
+                    toLogin();
+                }, 1000);
             } else {
                 tip('warning', response.data.msg);
-                return;
             }
         } else {
             return Promise.reject(response);

@@ -85,12 +85,9 @@ export default {
             });
 
             this.$post("/admin/app").then(res => {
-                if (res.code === 1) {
-                    this.tableData = res.data.list
-                }
+                this.tableData = res.data.list
             })
             loading.close();
-
         },
         openDialog_add () {
             this.dialogData = null
