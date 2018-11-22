@@ -1,0 +1,17 @@
+{
+  "id": 16,
+  "create_time": "2018-11-20 17:30:43",
+  "name": "test",
+  "link": "http://168.168.100.16/app_manage/server/public/conf/test.json",
+  "appversion": [
+    {
+      "id": 32,
+      "app_id": 16,
+      "version_name": "1.0",
+      "create_time": "2018-11-20 17:30:43",
+      "content": "test",
+      "file": "http://168.168.100.16/app_manage/server/public/upload/20181120/2313ff0f205ab36a907a3146d1128f2b.jpg",
+      "count": 0
+    }
+  ]
+}

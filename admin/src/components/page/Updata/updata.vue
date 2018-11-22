@@ -19,7 +19,8 @@
                        :tableData="tableData"
                        :showControl=true
                        @updataDialog="updataDialog"
-                       ref="tableList"></tablelist>
+                       ref="tableList"
+                       @isUploaded="_getData"></tablelist>
         </div>
         <updataDialog :showDialog="showDialog"
                       :isUpdata="isUpdata"
@@ -30,8 +31,9 @@
 
 </template>
 <script>
-import tablelist from './tableList'
+import tablelist from 'common/tableList'
 import updataDialog from './updataDialog'
+import { Loading } from 'element-ui';
 
 export default {
     name: 'userInfo',
@@ -75,9 +77,31 @@ export default {
     },
     methods: {
         _getData () {
+            const loading = this.$loading({
+                lock: true,
+                text: 'Loading',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+
             this.$post("/admin/app").then(res => {
                 if (res.code === 1) {
                     this.tableData = res.data.list
+                    loading.close();
+                } else if (res.code === 0) {
+                    this.$message({
+                        message: res.msg,
+                        type: 'error'
+                    });
+                } else if (res.code === 10001) {
+                    this.$message({
+                        message: res.msg,
+                        type: 'error'
+                    });
+
+                    loading.close();
+
+                    this.$router.push('/login');
                 }
             })
         },

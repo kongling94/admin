@@ -18,13 +18,17 @@ export default new Router({
                 {
                     path: '/userinfo',
                     component: resolve =>
-                        require(['../components/page/userInfo.vue'], resolve),
+                        require([
+                            '../components/page/Userinfo/userInfo.vue'
+                        ], resolve),
                     meta: { title: '用户概况' }
                 },
                 {
                     path: '/updata',
                     component: resolve =>
-                        require(['../components/page/updata.vue'], resolve),
+                        require([
+                            '../components/page/Updata/updata.vue'
+                        ], resolve),
                     meta: { title: '版本更新' }
                 },
                 {
@@ -33,7 +37,7 @@ export default new Router({
                         require(['../components/page/Dashboard.vue'], resolve),
                     meta: { title: '系统首页' }
                 },
-                /*  {
+                /* {
                     path: '/icon',
                     component: resolve =>
                         require(['../components/page/Icon.vue'], resolve),
@@ -116,7 +120,7 @@ export default new Router({
         {
             path: '/login',
             component: resolve =>
-                require(['../components/page/Login.vue'], resolve)
+                require(['../components/page/Login/Login.vue'], resolve)
         },
         {
             path: '*',
