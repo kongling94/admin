@@ -57,6 +57,7 @@
 </template>
 <script>
 import bus from '../common/bus';
+import { mapActions } from 'vuex';
 export default {
     data () {
         return {
@@ -73,10 +74,15 @@ export default {
         }
     },
     methods: {
+        ...mapActions([
+            'removeToken'
+        ]),
         // 用户名下拉菜单选择事件
         handleCommand (command) {
             if (command == 'loginout') {
+                this.removeToken()
                 localStorage.removeItem('username')
+                localStorage.removeItem('deviceType')
                 this.$router.push('/login');
             }
         },

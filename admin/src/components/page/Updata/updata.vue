@@ -87,19 +87,10 @@ export default {
             this.$post("/admin/app").then(res => {
                 if (res.code === 1) {
                     this.tableData = res.data.list
-                    loading.close();
-                } else if (res.code === 0) {
-                    this.$message({
-                        message: res.msg,
-                        type: 'error'
-                    });
-                } else if (res.code === 10001) {
-                    this.$message({
-                        message: res.msg,
-                        type: 'error'
-                    });
                 }
             })
+            loading.close();
+
         },
         openDialog_add () {
             this.dialogData = null

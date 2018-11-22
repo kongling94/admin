@@ -10,8 +10,8 @@ import { Message } from 'element-ui';
 const root = process.env.API_ROOT;
 
 // 配置请求头
-axios.defaults.headers.post['Content-Type'] =
-    'application/x-www-form-urlencoded;charset=UTF-8';
+/* axios.defaults.headers.post['Content-Type'] =
+    'application/x-www-form-urlencoded;charset=UTF-8'; */
 function formatQuery(str) {
     let ary = str.split('&');
     let obj = {};
@@ -45,7 +45,17 @@ axios.interceptors.response.use(
     response => {
         // 200 请求成功
         if (response.status === 200) {
-            return Promise.resolve(response);
+            if (response.data.code === 1) {
+                return Promise.resolve(response);
+            } else if (response.data.code === 10001) {
+                tip('warning', response.data.msg);
+                toLogin();
+                store.commit('removeToken');
+                return;
+            } else {
+                tip('warning', response.data.msg);
+                return;
+            }
         } else {
             return Promise.reject(response);
         }
@@ -59,7 +69,7 @@ axios.interceptors.response.use(
                     break;
                 // 登录超时
                 case 403:
-                    tip('warning', '登录过期，请重新登录.');
+                    tip('warning', '登录过期，请重新登录!');
                     toLogin();
                     // 清除token
                     localStorage.removeItem('token');

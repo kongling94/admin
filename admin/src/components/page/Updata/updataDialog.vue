@@ -146,6 +146,7 @@ export default {
             fd.append('version_name', this.addFormData.version_name)
             fd.append('content', this.addFormData.content)
             const url = this.isUpdata ? '/admin/appversion/update' : '/admin/appversion/add'
+
             this.$post(url, {
                 data: fd,
                 headers: {
@@ -159,16 +160,6 @@ export default {
                         message: res.msg
                     })
                     this.$emit('isUploaded')
-                } else if (res.code === 0) {
-                    this.$message({
-                        message: res.msg,
-                        type: 'error'
-                    });
-                } else if (res.code === 10001) {
-                    this.$message({
-                        message: res.msg,
-                        type: 'error'
-                    });
                 }
 
             }).catch(err => {

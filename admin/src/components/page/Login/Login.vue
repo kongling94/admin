@@ -86,11 +86,6 @@ export default {
                     this.setLoginInfo(data)
                     // localStorage.setItem('username', this.ruleForm.username);
                     this.$router.push('/');
-                } else if (res.code === 0) {
-                    this.$message({
-                        message: res.msg,
-                        type: 'error'
-                    });
                 }
             })
         }

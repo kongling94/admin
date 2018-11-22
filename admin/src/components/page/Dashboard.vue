@@ -2,7 +2,7 @@
     <div>
         <el-row :gutter="20">
 
-            <el-col :span="16">
+            <el-col :span="24">
                 <el-row :gutter="20"
                         class="mgb20">
                     <el-col :span="8">
@@ -46,18 +46,24 @@
                          style="height:403px;">
                     <div slot="header"
                          class="clearfix">
-                        <span>待办事项</span>
-                        <el-button style="float: right; padding: 3px 0"
-                                   type="text">添加</el-button>
+                        <span>操作记录</span>
+                        <!-- <el-button style="float: right; padding: 3px 0"
+                                   type="text">添加</el-button> -->
                     </div>
                     <el-table :data="todoList"
-                              :show-header="false"
                               height="304"
                               style="width: 100%;font-size:14px;">
-                        <el-table-column width="40">
+                        <!-- todolist状态修改 -->
+                        <!-- <el-table-column width="40">
                             <template slot-scope="scope">
                                 <el-checkbox v-model="scope.row.status"></el-checkbox>
                             </template>
+                        </el-table-column> -->
+                        <!-- 表头 -->
+                        <el-table-column v-for="item in tableHeader"
+                                         :key="item.id"
+                                         :prop="item.prop"
+                                         :label="item.label">
                         </el-table-column>
                         <el-table-column>
                             <template slot-scope="scope">
@@ -65,16 +71,16 @@
                                      :class="{'todo-item-del': scope.row.status}">{{scope.row.title}}</div>
                             </template>
                         </el-table-column>
-                        <el-table-column width="60">
+                        <!-- <el-table-column width="60">
                             <template slot-scope="scope">
                                 <i class="el-icon-edit"></i>
                                 <i class="el-icon-delete"></i>
                             </template>
-                        </el-table-column>
+                        </el-table-column> -->
                     </el-table>
                 </el-card>
             </el-col>
-            <el-col :span="8">
+            <!-- <el-col :span="8">
                 <el-card shadow="hover"
                          class="mgb20"
                          style="height:100%">
@@ -90,7 +96,7 @@
                     <div class="user-info-list">上次登录时间：<span>2018-01-01</span></div>
                     <div class="user-info-list">上次登录地点：<span></span></div>
                 </el-card>
-                <!-- <el-card shadow="hover"
+                <el-card shadow="hover"
                          style="height:252px;">
                     <div slot="header"
                          class="clearfix">
@@ -107,8 +113,8 @@
                     HTML
                     <el-progress :percentage="0.9"
                                  color="#f56c6c"></el-progress>
-                </el-card> -->
-            </el-col>
+                </el-card>
+            </el-col> -->
         </el-row>
         <el-row :gutter="20">
             <el-col :span="12">
@@ -143,6 +149,24 @@ export default {
     data () {
         return {
             name: localStorage.getItem('username'),
+            tableHeader: [
+                {
+                    label: 'UID',
+                    prop: 'id'
+                },
+                {
+                    label: '操作人',
+                    prop: 'user_login'
+                },
+                {
+                    label: '操作内容',
+                    prop: 'content'
+                },
+                {
+                    label: '操作时间',
+                    prop: 'create_time'
+                }
+            ],
             todoList: [{
                 title: '今天要修复100个bug',
                 status: false,
@@ -160,11 +184,11 @@ export default {
             },
             {
                 title: '今天要修复100个bug',
-                status: true,
+                status: false,
             },
             {
                 title: '今天要写100行代码加几个bug吧',
-                status: true,
+                status: false,
             }
             ],
             data: [{
@@ -254,8 +278,16 @@ export default {
         renderChart () {
             this.$refs.bar.renderChart();
             this.$refs.line.renderChart();
+        },
+        _getTodoList () {
+            this.$post('/admin/log').then(res => {
+                console.log(res)
+            })
         }
-    }
+    },
+    mounted () {
+        this._getTodoList()
+    },
 }
 
 </script>
