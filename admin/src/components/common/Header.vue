@@ -63,14 +63,14 @@ export default {
         return {
             collapse: false,
             fullscreen: false,
-            name: 'linxin',
+            name: '',
             message: 2
         }
     },
     computed: {
         username () {
             let username = localStorage.getItem('username');
-            return username ? username : this.name;
+            return username;
         }
     },
     methods: {

@@ -3,7 +3,14 @@ const path = require('path');
 const utils = require('./utils');
 const config = require('../config');
 const vueLoaderConfig = require('./vue-loader.conf');
-
+var webpack_public_path = '';
+if (process.env.NODE_ENV === 'production') {
+    webpack_public_path = config.build.assetsPublicPath;
+} else if (process.env.NODE_ENV === 'test') {
+    webpack_public_path = config.test.assetsPublicPath;
+} else if (process.env.NODE_ENV === 'development') {
+    webpack_public_path = config.dev.assetsPublicPath;
+}
 function resolve(dir) {
     return path.join(__dirname, '..', dir);
 }
@@ -16,10 +23,7 @@ module.exports = {
     output: {
         path: config.build.assetsRoot,
         filename: '[name].js',
-        publicPath:
-            process.env.NODE_ENV === 'production'
-                ? config.build.assetsPublicPath
-                : config.dev.assetsPublicPath
+        publicPath: webpack_public_path
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
